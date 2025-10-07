@@ -1,367 +1,457 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anil Yaswanth | Operations & Business Analysis Leader</title>
-  <meta name="description" content="Strategic Ops & Business Analysis leader with 10+ years' experience across EA and Amazon. Lean Six Sigma Black Belt, PRINCE2. Hyderabad, India." />
-  <meta name="theme-color" content="#0ea5e9" />
-  <meta property="og:title" content="Anil Yaswanth – Portfolio" />
-  <meta property="og:description" content="Operations Excellence, Business Analysis, AI/ML enablement, Lean Six Sigma Black Belt." />
+  <title>Anil Yaswanth | Interactive Portfolio</title>
+  <meta name="description" content="Explore Anil Yaswanth’s interactive portfolio—case studies, dashboards, AI/ML rollouts, and an integrated contact form." />
+  <meta name="theme-color" content="#06b6d4" />
+  <meta property="og:title" content="Anil Yaswanth – Interactive Portfolio" />
+  <meta property="og:description" content="Operational Excellence • Business Analysis • AI/ML Enablement" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1526378722443-4b2d8ae2f8ef?q=80&w=1200&auto=format&fit=crop" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&auto=format&fit=crop" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
-          colors: { brand: { 50:'#ecfeff', 100:'#cffafe', 200:'#a5f3fc', 300:'#67e8f9', 400:'#22d3ee', 500:'#06b6d4', 600:'#0891b2', 700:'#0e7490', 800:'#155e75', 900:'#164e63' } }
-        }
-      }
+      darkMode:'class',
+      theme: { extend: {
+        fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] },
+        colors: { brand: {50:'#ecfeff',100:'#cffafe',200:'#a5f3fc',300:'#67e8f9',400:'#22d3ee',500:'#06b6d4',600:'#0891b2',700:'#0e7490',800:'#155e75',900:'#164e63'} }
+      }}
     }
   </script>
   <style>
-    /* Smooth anchor scrolling */
-    html { scroll-behavior: smooth; }
-    /* Print-friendly */
-    @media print { .no-print { display:none !important;} section { break-inside: avoid; } }
+    html{scroll-behavior:smooth}
+    .glass{backdrop-filter:blur(10px);background:rgba(255,255,255,.7)}
+    .dark .glass{background:rgba(2,6,23,.6)}
+    @media (prefers-reduced-motion:no-preference){ .spin-slow{animation:spin 8s linear infinite} }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
-  <!-- ===================== SIMPLE DATA CMS =====================
-    HOW TO UPDATE YOUR SITE (no code skills needed):
-    1) Edit the JSON below (the const DATA = { ... }).
-    2) Commit the change to GitHub Pages (instructions in ChatGPT message).
-    3) Refresh the page.
-    You can add/edit items; the UI renders automatically.
-  -->
-  <script>
-    const DATA = {
-      basic: {
-        name: "Anil Yaswanth",
-        role: "Manager (Business Analysis) – Operational Excellence",
-        summary: "Strategic Operations & Business Analysis leader enabling AI/ML-driven process excellence, KPI design, and cross-functional delivery.",
-        location: "Hyderabad, India",
-        phone: "+91-8125293949",
-        email: "anil.yaswanth@gmail.com",
-        links: [
-          { label: "LinkedIn", url: "#" },
-          { label: "GitHub", url: "#" },
-          { label: "Download Resume (PDF)", url: "#" }
-        ]
-      },
-      skills: [
-        "Operational Excellence", "Business Analysis", "AI/ML Enablement", "Lean Six Sigma (Black Belt)", "PRINCE2", "Tableau", "Power BI", "SQL", "DAX",
-        "KPI Frameworks", "Change Management", "Stakeholder Management", "Program/Project Management"
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200">
+
+<!-- ================== CONTENT MODEL (edit to update) ================== -->
+
+<script>
+const SITE = {
+  person:{
+    name:'Anil Yaswanth',
+    title:'Operational Excellence • Business Analysis • AI/ML Enablement',
+    summary:'I help teams ship faster and smarter by turning ambiguous ops problems into measurable outcomes—leaner workflows, sharp KPIs, and automation where it matters.',
+    location:'Hyderabad, India', phone:'+91-8125293949', email:'anil.yaswanth@gmail.com',
+    links:[
+      {label:'LinkedIn', url:'#'},
+      {label:'GitHub', url:'#'},
+      {label:'Download Resume (PDF)', url:'#'}
+    ]
+  },
+  impact:[
+    {k:'Efficiency Uplift', v:'+20%'},
+    {k:'Manual Effort ↓', v:'~60%'},
+    {k:'Accuracy ↑', v:'~35%'},
+    {k:'Dashboards', v:'15+'}
+  ],
+  tabs:[
+    {id:'case-studies', icon:'📊', title:'Case Studies', desc:'Deep dives with approach → KPIs → outcomes.'},
+    {id:'dashboards', icon:'📈', title:'Dashboards', desc:'Tableau, Power BI, SQL, DAX.'},
+    {id:'ai-ml', icon:'🤖', title:'AI/ML', desc:'Feasibility, rollout, automation & quality.'}
+  ],
+  projects:{
+    'case-studies':[{
+      id:'ops-suite', tag:'Ops • BI', title:'Operational Excellence Dashboard Suite', metrics:['15+ dashboards','KPI surfacing','45% opps found'],
+      teaser:'Unified KPI platform across 14 teams; revealed ~45% improvement areas in year one.',
+      body:[
+        'Mapped VMOST to KPIs; standardized definitions & lineage to kill reporting drift.',
+        'Cut report build time by 50%+ via templates and governed data sources.',
+        'Added drilldowns by team/product/time; leadership could spot blockers in minutes.'
       ],
-      experience: [
-        {
-          company: "Electronic Arts (EA / EA SPORTS)",
-          title: "Manager (Business Analysis) – Operational Excellence",
-          location: "Hyderabad, India",
-          from: "Jun 2023",
-          to: "Present",
-          highlights: [
-            "Org-wide efficiency tracking across 14 teams; prioritized 40+ projects.",
-            "Resolved cross-team bottlenecks; ~20% workflow efficiency uplift.",
-            "AI/ML feasibility & rollout in 3 areas; ~60% manual effort reduction; ~35% accuracy improvement.",
-            "Partnered with leadership for product launches hitting Q1 targets.",
-            "VMOST strategy facilitation across multiple business units.",
-            "Built 15+ dashboards (Tableau/Power BI/SQL/DAX) to surface growth opportunities.",
-            "Instituted KPIs that identified ~45% improvement opportunities in 1 year.",
-            "Negotiated vendor contracts; ~10% cost reduction."
-          ]
-        },
-        {
-          company: "Electronic Arts (EA / EA SPORTS)",
-          title: "Lead Project Manager – Real Time Operations",
-          location: "Hyderabad, India",
-          from: "Sep 2019",
-          to: "Jun 2023",
-          highlights: [
-            "Led Project Academy II; supported digital revenue, incl. ~$14M for The Sims pilot.",
-            "Change management for tool migration; ~80% utilization; decision efficiency +50%.",
-            "Directed BI team delivering 40+ dashboards & automation; faster reporting.",
-            "Owned capacity, shifts, contractor execution & comp planning; overtime costs -15%."
-          ]
-        },
-        {
-          company: "Amazon (B2B / Risk)",
-          title: "Manager / Senior Risk Investigator (SME)",
-          location: "Hyderabad, India",
-          from: "Nov 2014",
-          to: "Aug 2019",
-          highlights: [
-            "Led 25-member team for Business Account registrations & investigations.",
-            "Defined SOPs, SLAs; drove process improvements for Buyer Risk org.",
-            "Capacity & workforce management for Amazon Business.",
-            "Recognized as Employee of the Year in 2017 & 2018."
-          ]
-        }
+      links:[{label:'Walkthrough (redacted)', url:'#'}]
+    },{
+      id:'bottlenecks', tag:'Ops • Strategy', title:'Cross-team Bottleneck Removal', metrics:['20% faster workflows','40+ projects prioritized','-15% overtime'],
+      teaser:'Value-stream mapping + WIP caps unblocked throughput for Real Time Ops.',
+      body:[
+        'Identified systemic blockers across handoffs; rebalanced capacity and shifts.',
+        'Change plan → new tool adoption at 80% utilization; decision speed +50%.',
+        'Vendor renegotiation saved ~10% without quality loss.'
       ],
-      education: [
-        { school: "IIM Ahmedabad", program: "Executive Diploma in Strategic Management", period: "Apr 2020 – Oct 2020" },
-        { school: "BCS, The Chartered Institute for IT", program: "International Diploma in Business Analysis", period: "Oct 2021 – May 2023" },
-        { school: "Amity University, Noida & Singapore", program: "MBA (Operations & Marketing)", period: "Jun 2012 – Jul 2014" }
-      ],
-      certifications: [
-        { name: "Lean Six Sigma Black Belt", date: "Jun 2023" },
-        { name: "PRINCE2 Foundation & Practitioner", date: "Nov 2020" }
-      ],
-      // Add new items below; the page will auto-render
-      projects: [
-        { name: "Operational Excellence Dashboard Suite", tag: "BI/Analytics", link: "#", desc: "15+ dashboards for KPI visibility & growth insights." },
-        { name: "AI/ML Feasibility & Rollout", tag: "AI/ML", link: "#", desc: "Automation + accuracy uplift across 3 business areas." }
+      links:[{label:'One-pager', url:'#'}]
+    }],
+    'dashboards':[{
+      id:'rev-sims', tag:'Revenue • BI', title:'Digital Revenue Pilot – The Sims', metrics:['~$14M pilot impact'],
+      teaser:'Exec visuals + leading indicators to steer experiments.',
+      body:[ 'Defined north-star KPIs & guardrails; built test/control views; automated weekly narrative.' ]
+    },{
+      id:'bi-portfolio', tag:'Analytics', title:'BI Portfolio', metrics:['40+ dashboards'],
+      teaser:'Self-serve analytics for ops, capacity, and risk.',
+      body:['Tableau/Power BI with SQL/DAX models; refresh SLAs & ownership clearly defined.']
+    }],
+    'ai-ml':[{
+      id:'ml-rollout', tag:'Automation', title:'AI/ML Rollout Across 3 Domains', metrics:['~60% manual ↓','~35% accuracy ↑'],
+      teaser:'Business-led feasibility → pilots → scaled adoption with HITL.',
+      body:[
+        'Partnered with data science for classification/triage and QA augmentation.',
+        'A/B baselines with precision/recall gates; success criteria locked up front.',
+        'Playbook for scale: data contracts, feedback loops, and monitoring.'
       ]
-    };
-  </script>
+    }]
+  }
+};
 
-  <!-- NAVBAR -->
-  <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
-        <a href="#home" class="flex items-center gap-2 font-semibold text-slate-900">
-          <span class="inline-block h-8 w-8 rounded-xl bg-brand-600 text-white grid place-items-center">AY</span>
-          <span>Anil Yaswanth</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
-          <a href="#experience" class="hover:text-brand-700">Experience</a>
-          <a href="#skills" class="hover:text-brand-700">Skills</a>
-          <a href="#education" class="hover:text-brand-700">Education</a>
-          <a href="#certifications" class="hover:text-brand-700">Certifications</a>
-          <a href="#projects" class="hover:text-brand-700">Projects</a>
-          <a href="#contact" class="hover:text-brand-700">Contact</a>
-        </nav>
-        <button id="editBtn" class="no-print inline-flex items-center gap-2 px-3 py-2 text-sm rounded-xl bg-brand-600 text-white hover:bg-brand-700 active:scale-[.98]">
-          ✏️ Edit
-        </button>
+// Replace with your form backend endpoint (Formspree/Netlify/etc.).
+const FORM_ENDPOINT = "#"; // e.g., "https://formspree.io/f/xxxxxxx"
+</script>
+
+<!-- ================== NAVBAR ================== -->
+
+<header class="sticky top-0 z-50 glass border-b border-slate-200/60 dark:border-slate-800/60">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="h-16 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2 font-semibold"><span class="h-8 w-8 rounded-xl bg-brand-600 text-white grid place-items-center">AY</span><span>Anil Yaswanth</span></a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#work" class="hover:text-brand-700 dark:hover:text-brand-300">Work</a>
+        <a href="#projects" class="hover:text-brand-700 dark:hover:text-brand-300">Projects</a>
+        <a href="#about" class="hover:text-brand-700 dark:hover:text-brand-300">About</a>
+        <a href="#contact" class="hover:text-brand-700 dark:hover:text-brand-300">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeBtn" class="h-9 w-9 grid place-items-center rounded-xl ring-1 ring-slate-200 dark:ring-slate-700">🌙</button>
+        <button id="cmdBtn" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 text-sm rounded-xl bg-brand-600 text-white hover:bg-brand-700">⌘K</button>
       </div>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section id="home" class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-50 via-white to-brand-100"></div>
-    <div class="max-w-6xl mx-auto px-4 pt-12 pb-10">
-      <div class="grid md:grid-cols-[2fr,1fr] gap-8 items-center">
-        <div>
-          <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-            <span id="name">Anil Yaswanth</span>
-          </h1>
-          <p class="mt-3 text-lg md:text-xl text-slate-700" id="role"></p>
-          <p class="mt-4 text-slate-600" id="summary"></p>
-          <div class="mt-6 flex flex-wrap gap-3" id="links"></div>
-        </div>
-        <div class="md:justify-self-end">
-          <div class="rounded-3xl bg-white shadow-lg ring-1 ring-black/5 p-6 w-full md:w-[380px]">
-            <h3 class="font-semibold text-slate-900">Quick Facts</h3>
-            <ul class="mt-4 space-y-2 text-sm text-slate-700" id="quickfacts"></ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="py-12">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Experience</h2>
-      <div id="expList" class="mt-6 grid gap-6"></div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="py-12 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Skills</h2>
-      <div id="skillsChips" class="mt-6 flex flex-wrap gap-2"></div>
-    </div>
-  </section>
-
-  <!-- EDUCATION & CERTIFICATIONS -->
-  <section id="education" class="py-12">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Education</h2>
-        <ul id="eduList" class="mt-6 space-y-4"></ul>
-      </div>
-      <div id="certifications">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Certifications</h2>
-        <ul id="certList" class="mt-6 space-y-4"></ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="py-12 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Projects</h2>
-      <div id="projGrid" class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-12">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Contact</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <form class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5">
-          <div class="grid gap-4">
-            <input type="text" placeholder="Your Name" class="px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500" required>
-            <input type="email" placeholder="Your Email" class="px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500" required>
-            <textarea placeholder="Message" rows="4" class="px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500" required></textarea>
-            <button type="submit" class="inline-flex justify-center items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Send</button>
-            <p class="text-xs text-slate-500">This demo form doesn't send email on its own. Replace with your email link or a form backend (e.g., Formspree).</p>
-          </div>
-        </form>
-        <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5">
-          <ul class="space-y-3 text-slate-700">
-            <li>📍 <span id="loc"></span></li>
-            <li>📞 <a id="phone" class="text-brand-700 underline" href="#"></a></li>
-            <li>✉️ <a id="email" class="text-brand-700 underline" href="#"></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="py-8 border-t border-slate-200 bg-white">
-    <div class="max-w-6xl mx-auto px-4 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>© <span id="year"></span> <strong>Anil Yaswanth</strong>. All rights reserved.</p>
-      <div>
-        <a href="#home" class="text-slate-600 hover:text-brand-700">Back to top ↑</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- EDITOR DRAWER -->
-  <div id="drawer" class="no-print fixed inset-y-0 right-0 w-full max-w-md translate-x-full bg-white shadow-2xl ring-1 ring-black/10 transition-transform duration-300 z-50 overflow-y-auto">
-    <div class="p-4 border-b border-slate-200 flex items-center justify-between">
-      <h3 class="font-semibold text-slate-900">Quick Edit</h3>
-      <button id="closeDrawer" class="text-slate-500 hover:text-slate-800">✕</button>
-    </div>
-    <div class="p-4">
-      <p class="text-sm text-slate-600 mb-2">Update your content here. Copy your changes back into the DATA JSON (top of file) when you're happy.</p>
-      <textarea id="editor" class="w-full h-[60vh] p-3 rounded-xl border border-slate-300 font-mono text-xs"></textarea>
-      <div class="mt-3 flex gap-2">
-        <button id="previewBtn" class="px-3 py-2 rounded-xl bg-brand-600 text-white">Preview</button>
-        <button id="resetBtn" class="px-3 py-2 rounded-xl bg-slate-200">Reset</button>
-      </div>
-      <p class="text-[11px] text-slate-500 mt-3">Changes preview only in your browser until you update the DATA constant in this file and redeploy.</p>
     </div>
   </div>
+</header>
 
-  <script>
-    // ---------- Render helpers ----------
-    const el = (sel) => document.querySelector(sel);
-    const create = (tag, cls) => { const x = document.createElement(tag); if (cls) x.className = cls; return x; };
+<!-- ================== HERO ================== -->
 
-    function render(data){
-      el('#name').textContent = data.basic.name;
-      el('#role').textContent = data.basic.role;
-      el('#summary').textContent = data.basic.summary;
+<section id="home" class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-50 via-white to-brand-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800"></div>
+  <div class="max-w-7xl mx-auto px-4 py-14">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white" id="heroName"></h1>
+        <p class="mt-3 text-lg md:text-xl text-slate-700 dark:text-slate-300" id="heroTitle"></p>
+        <p class="mt-4 max-w-2xl text-slate-600 dark:text-slate-400" id="heroSummary"></p>
+        <div class="mt-6 flex flex-wrap gap-3" id="heroLinks"></div>
+      </div>
+      <div class="lg:justify-self-end">
+        <div class="rounded-3xl bg-white dark:bg-slate-800 shadow-lg ring-1 ring-black/5 p-6 w-full lg:w-[420px]">
+          <h3 class="font-semibold">Impact at a glance</h3>
+          <div id="kpiGrid" class="mt-4 grid grid-cols-2 gap-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      // links
-      const linksWrap = el('#links'); linksWrap.innerHTML='';
-      data.basic.links.filter(l=>l.url && l.url !== '#').forEach(l=>{
-        const a = create('a','inline-flex items-center gap-2 px-3 py-2 text-sm rounded-xl bg-white ring-1 ring-slate-200 shadow-sm hover:shadow text-slate-700 hover:text-slate-900');
-        a.href = l.url; a.textContent = l.label; a.target = '_blank'; a.rel='noopener';
-        linksWrap.appendChild(a);
-      });
+<!-- ================== WORK (TIMELINE CARDS) ================== -->
 
-      // quick facts
-      const facts = el('#quickfacts'); facts.innerHTML='';
-      const factItems = [
-        ['📍', data.basic.location],
-        ['📞', data.basic.phone],
-        ['✉️', data.basic.email],
-      ];
-      factItems.forEach(([icon, text])=>{
-        const li = create('li'); li.innerHTML = `${icon} ${text}`; facts.appendChild(li);
-      });
+<section id="work" class="py-12">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-2xl md:text-3xl font-bold">Selected Work</h2>
+      <p class="text-sm text-slate-500">Jump to <a href="#projects" class="text-brand-700 dark:text-brand-300 underline">Projects</a> for deep dives</p>
+    </div>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <article class="rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5">
+        <header class="flex items-center justify-between"><div>
+          <h3 class="font-semibold">Electronic Arts (EA)</h3>
+          <p class="text-sm text-slate-500">Manager (Business Analysis) – Operational Excellence • 2023–Present</p></div>
+          <span class="h-10 w-10 rounded-xl bg-brand-50 text-brand-700 grid place-items-center spin-slow">⚙️</span>
+        </header>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700 dark:text-slate-300 list-disc pl-5">
+          <li>Org-wide efficiency tracking across 14 teams; prioritized 40+ projects.</li>
+          <li>AI/ML feasibility & rollout in 3 areas; ~60% manual ↓; ~35% accuracy ↑.</li>
+          <li>15+ dashboards in Tableau/Power BI/SQL/DAX revealing ~45% improvement opps.</li>
+        </ul>
+      </article>
+      <article class="rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5">
+        <header class="flex items-center justify-between"><div>
+          <h3 class="font-semibold">EA – Real Time Operations</h3>
+          <p class="text-sm text-slate-500">Lead Project Manager • 2019–2023</p></div>
+          <span class="h-10 w-10 rounded-xl bg-brand-50 text-brand-700 grid place-items-center">📈</span>
+        </header>
+        <ul class="mt-4 space-y-2 text-sm list-disc pl-5">
+          <li>Project Academy II; supported digital revenue incl. ~$14M Sims pilot.</li>
+          <li>Change management → 80% tool utilization; decision efficiency +50%.</li>
+          <li>Directed BI team delivering 40+ dashboards; overtime costs -15%.</li>
+        </ul>
+      </article>
+      <article class="rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5 md:col-span-2">
+        <header class="flex items-center justify-between"><div>
+          <h3 class="font-semibold">Amazon (B2B / Risk)</h3>
+          <p class="text-sm text-slate-500">Manager / Senior Risk Investigator (SME) • 2014–2019</p></div>
+          <span class="h-10 w-10 rounded-xl bg-brand-50 text-brand-700 grid place-items-center">🛡️</span>
+        </header>
+        <ul class="mt-4 space-y-2 text-sm list-disc pl-5">
+          <li>Led 25-member team for Business Account registrations & investigations.</li>
+          <li>Defined SOPs/SLAs; capacity & workforce management for Amazon Business.</li>
+          <li>Employee of the Year: 2017 & 2018.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
 
-      // exp
-      const exp = el('#expList'); exp.innerHTML='';
-      data.experience.forEach((e)=>{
-        const card = create('article','rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5');
-        const h = create('div','flex items-center justify-between gap-4');
-        const left = create('div');
-        left.innerHTML = `<h3 class="font-semibold text-slate-900">${e.title}</h3>
-                          <p class="text-sm text-slate-600">${e.company} • ${e.location}</p>`;
-        const right = create('div','text-sm text-slate-500'); right.textContent = `${e.from} – ${e.to}`;
-        h.append(left,right);
-        const ul = create('ul','mt-4 space-y-2 text-sm text-slate-700 list-disc pl-5');
-        e.highlights.forEach(li=>{ const item = create('li'); item.textContent = li; ul.appendChild(item); });
-        card.append(h,ul); exp.appendChild(card);
-      });
+<!-- ================== PROJECTS (TABS + MODALS) ================== -->
 
-      // skills
-      const skills = el('#skillsChips'); skills.innerHTML='';
-      data.skills.forEach(s=>{
-        const b = create('span','px-3 py-1 rounded-full bg-brand-50 text-brand-700 ring-1 ring-brand-200 text-sm');
-        b.textContent = s; skills.appendChild(b);
-      });
+<section id="projects" class="py-12 bg-white dark:bg-slate-950/40">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold">Projects</h2>
 
-      // education
-      const edu = el('#eduList'); edu.innerHTML='';
-      data.education.forEach(ed=>{
-        const li = create('li','rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5');
-        li.innerHTML = `<div class="font-medium text-slate-900">${ed.school}</div>
-                        <div class="text-sm text-slate-700">${ed.program}</div>
-                        <div class="text-xs text-slate-500">${ed.period}</div>`; edu.appendChild(li);
-      });
+```
+<!-- Tab headers -->
+<div id="tabHeader" class="mt-6 flex flex-wrap gap-2"></div>
 
-      // certifications
-      const cert = el('#certList'); cert.innerHTML='';
-      data.certifications.forEach(c=>{
-        const li = create('li','rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5');
-        li.innerHTML = `<div class="font-medium text-slate-900">${c.name}</div>
-                        <div class="text-xs text-slate-500">${c.date}</div>`; cert.appendChild(li);
-      });
+<!-- Tab panels -->
+<div id="tabPanels" class="mt-6"></div>
+```
 
-      // projects
-      const proj = el('#projGrid'); proj.innerHTML='';
-      data.projects.forEach(p=>{
-        const card = create('a','block rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 hover:shadow-lg hover:-translate-y-0.5 transition');
-        card.href = p.link || '#'; card.target = '_blank'; card.rel='noopener';
-        card.innerHTML = `<div class="text-xs inline-block px-2 py-1 rounded-full bg-slate-100 text-slate-700">${p.tag}</div>
-                          <h3 class="mt-3 font-semibold text-slate-900">${p.name}</h3>
-                          <p class="mt-1 text-sm text-slate-600">${p.desc || ''}</p>`;
-        proj.appendChild(card);
-      });
+  </div>
+</section>
 
-      // contact
-      el('#loc').textContent = data.basic.location;
-      const phoneA = el('#phone'); phoneA.textContent = data.basic.phone; phoneA.href = `tel:${data.basic.phone.replace(/\s+/g,'')}`;
-      const emailA = el('#email'); emailA.textContent = data.basic.email; emailA.href = `mailto:${data.basic.email}`;
+<!-- Modal Drawer for Project Details -->
 
-      // footer year
-      el('#year').textContent = new Date().getFullYear();
-    }
+<div id="drawer" class="fixed inset-0 z-50 hidden">
+  <div class="absolute inset-0 bg-black/50" onclick="closeDrawer()"></div>
+  <aside class="absolute right-0 top-0 h-full w-full max-w-xl bg-white dark:bg-slate-900 shadow-2xl p-6 overflow-y-auto">
+    <div class="flex items-center justify-between">
+      <h3 id="drawerTitle" class="text-xl font-semibold"></h3>
+      <button onclick="closeDrawer()" class="text-slate-500 hover:text-slate-800">✕</button>
+    </div>
+    <p id="drawerTag" class="text-sm text-slate-500 mt-1"></p>
+    <div id="drawerMetrics" class="mt-3 flex flex-wrap gap-2"></div>
+    <p id="drawerTeaser" class="mt-4 text-slate-700 dark:text-slate-300"></p>
+    <ul id="drawerBody" class="mt-4 space-y-2 list-disc pl-5 text-sm"></ul>
+    <div id="drawerLinks" class="mt-6 flex flex-wrap gap-2"></div>
+  </aside>
+</div>
 
-    // initial render
-    let STATE = JSON.parse(JSON.stringify(DATA));
-    render(STATE);
+<!-- ================== ABOUT ================== -->
 
-    // ---------- Drawer editor ----------
-    const drawer = el('#drawer');
-    const editor = el('#editor');
-    el('#editBtn').addEventListener('click', ()=>{
-      editor.value = JSON.stringify(STATE, null, 2);
-      drawer.classList.remove('translate-x-full');
+<section id="about" class="py-12">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold">About</h2>
+      <p class="mt-4 text-slate-700 dark:text-slate-300">I design systems that make great work repeatable—strategy → metrics → execution. My toolkit includes VMOST, value-stream mapping, KPI frameworks, and BI (Tableau/Power BI/SQL/DAX). I love shaping AI/ML adoption with crisp success criteria and responsible guardrails.</p>
+      <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
+        <div class="rounded-2xl p-4 ring-1 ring-black/5 bg-white dark:bg-slate-800"><div class="text-slate-500">Lean Six Sigma</div><div class="font-semibold">Black Belt</div></div>
+        <div class="rounded-2xl p-4 ring-1 ring-black/5 bg-white dark:bg-slate-800"><div class="text-slate-500">PRINCE2</div><div class="font-semibold">Foundation & Practitioner</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5">
+        <h3 class="font-semibold">Quick Facts</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li>📍 Hyderabad, India</li>
+          <li>📞 <a class="text-brand-700 underline" href="tel:+918125293949">+91-8125293949</a></li>
+          <li>✉️ <a class="text-brand-700 underline" href="mailto:anil.yaswanth@gmail.com">anil.yaswanth@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== CONTACT (READY FOR BACKEND) ================== -->
+
+<section id="contact" class="py-12 bg-white dark:bg-slate-950/40">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-6 items-start">
+      <form id="contactForm" class="rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5">
+        <div class="grid gap-4">
+          <input name="name" required placeholder="Your Name" class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand-500" />
+          <input type="email" name="email" required placeholder="Your Email" class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand-500" />
+          <textarea name="message" required rows="5" placeholder="Message" class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+          <!-- Optional: add your own hidden fields for subject/redirect -->
+          <input type="hidden" name="_subject" value="Portfolio Contact" />
+          <div class="flex items-center gap-3">
+            <button type="submit" class="inline-flex justify-center items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Send</button>
+            <span id="formStatus" class="text-sm text-slate-500"></span>
+          </div>
+          <p class="text-xs text-slate-500">Backend-ready: set <code>FORM_ENDPOINT</code> in the file to your Formspree/Netlify endpoint and it will send emails.</p>
+        </div>
+      </form>
+
+```
+  <div class="rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5">
+    <h3 class="font-semibold">How to enable the backend (1 min)</h3>
+    <ol class="mt-3 space-y-2 text-sm list-decimal pl-5">
+      <li>Create a free account at Formspree (or use Netlify Forms if you host on Netlify).</li>
+      <li>Copy your endpoint URL, e.g. <span class="font-mono">https://formspree.io/f/xxxxxxx</span>.</li>
+      <li>In this file, find <span class="font-mono">const FORM_ENDPOINT = "#";</span> and paste your URL there.</li>
+      <li>Commit the change. The form will start sending instantly.</li>
+    </ol>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<footer class="py-8 border-t border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between text-sm">
+    <p>© <span id="year"></span> <strong>Anil Yaswanth</strong></p>
+    <a href="#home" class="text-slate-600 dark:text-slate-300 hover:text-brand-700 dark:hover:text-brand-300">Back to top ↑</a>
+  </div>
+</footer>
+
+<!-- ================ COMMAND PALETTE (⌘K) ================ -->
+
+<div id="cmdk" class="fixed inset-0 hidden z-50">
+  <div class="absolute inset-0 bg-black/40" onclick="toggleCmd(false)"></div>
+  <div class="mx-auto mt-24 max-w-xl rounded-2xl bg-white dark:bg-slate-900 shadow-2xl ring-1 ring-black/10 p-3">
+    <input id="cmdInput" placeholder="Search sections or projects…" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 outline-none" />
+    <div id="cmdResults" class="mt-2 max-h-72 overflow-y-auto text-sm"></div>
+  </div>
+</div>
+
+<script>
+// ---------- Theme toggle ----------
+const root = document.documentElement;
+const themeBtn = document.getElementById('themeBtn');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+if(localStorage.theme==='dark' || (!('theme' in localStorage) && prefersDark)) document.documentElement.classList.add('dark');
+function toggleTheme(){ document.documentElement.classList.toggle('dark'); localStorage.theme=document.documentElement.classList.contains('dark')?'dark':'light'; }
+if(themeBtn) themeBtn.addEventListener('click', toggleTheme);
+
+// ---------- Hero render ----------
+function renderHero(){
+  document.getElementById('heroName').textContent = SITE.person.name;
+  document.getElementById('heroTitle').textContent = SITE.person.title;
+  document.getElementById('heroSummary').textContent = SITE.person.summary;
+  const links = document.getElementById('heroLinks'); links.innerHTML='';
+  SITE.person.links.filter(l=>l.url && l.url!=='#').forEach(l=>{
+    const a = document.createElement('a');
+    a.className = 'inline-flex items-center gap-2 px-3 py-2 text-sm rounded-xl bg-white dark:bg-slate-800 ring-1 ring-slate-200 dark:ring-slate-700 shadow hover:shadow-md';
+    a.href=l.url; a.target='_blank'; a.rel='noopener'; a.textContent=l.label; links.appendChild(a);
+  });
+  const kpi = document.getElementById('kpiGrid'); kpi.innerHTML='';
+  SITE.impact.forEach(i=>{
+    const card = document.createElement('div');
+    card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-900 ring-1 ring-slate-200 dark:ring-slate-700';
+    card.innerHTML = `<div class="text-slate-500 text-xs">${i.k}</div><div class="text-xl font-semibold">${i.v}</div>`; kpi.appendChild(card);
+  });
+}
+
+// ---------- Tabs & project cards ----------
+function renderTabs(){
+  const head = document.getElementById('tabHeader'); head.innerHTML='';
+  SITE.tabs.forEach(t=>{
+    const b = document.createElement('button');
+    b.className='px-3 py-2 rounded-xl ring-1 ring-slate-200 dark:ring-slate-700 bg-white/80 dark:bg-slate-800/80 hover:bg-brand-50 hover:text-brand-800 text-sm';
+    b.textContent=`${t.icon} ${t.title}`; b.dataset.tab=t.id; b.title=t.desc;
+    b.onclick=()=>activateTab(t.id); head.appendChild(b);
+  });
+  const panels = document.getElementById('tabPanels'); panels.innerHTML='';
+  SITE.tabs.forEach(t=>{
+    const wrap = document.createElement('div'); wrap.id=`panel-${t.id}`; wrap.className='hidden';
+    const list = SITE.projects[t.id]||[];
+    const grid = document.createElement('div'); grid.className='grid md:grid-cols-2 lg:grid-cols-3 gap-6';
+    list.forEach(p=>{
+      const card = document.createElement('article');
+      card.className='rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5 hover:shadow-lg hover:-translate-y-0.5 transition';
+      const chips = (p.metrics||[]).map(m=>`<span class='text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-900/60'>${m}</span>`).join(' ');
+      card.innerHTML = `
+        <div class='flex items-center justify-between'>
+          <div class='text-xs px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900/60'>${p.tag||''}</div>
+          <button class='text-brand-700 dark:text-brand-300 text-sm underline' data-open='${t.id}|${p.id}'>View →</button>
+        </div>
+        <h3 class='mt-3 font-semibold'>${p.title}</h3>
+        <p class='mt-2 text-sm text-slate-600 dark:text-slate-300'>${p.teaser||''}</p>
+        <div class='mt-3 flex flex-wrap gap-2'>${chips}</div>
+      `;
+      grid.appendChild(card);
     });
-    el('#closeDrawer').addEventListener('click', ()=> drawer.classList.add('translate-x-full'));
-    el('#previewBtn').addEventListener('click', ()=>{
-      try { STATE = JSON.parse(editor.value); render(STATE); }
-      catch(e){ alert('Invalid JSON. Please fix and try again.'); }
-    });
-    el('#resetBtn').addEventListener('click', ()=>{ STATE = JSON.parse(JSON.stringify(DATA)); editor.value = JSON.stringify(STATE, null, 2); render(STATE); });
-  </script>
+    wrap.appendChild(grid); panels.appendChild(wrap);
+  });
+  // default tab
+  const hashTab = location.hash.replace('#','');
+  activateTab(SITE.tabs.map(x=>x.id).includes(hashTab)?hashTab:SITE.tabs[0].id);
+  // delegate open buttons
+  panels.addEventListener('click', (e)=>{
+    const btn = e.target.closest('[data-open]'); if(!btn) return;
+    const [tab, id] = btn.dataset.open.split('|'); openDrawer(tab, id);
+  });
+}
+
+function activateTab(id){
+  SITE.tabs.forEach(t=>{
+    const p = document.getElementById(`panel-${t.id}`); if(p) p.classList.toggle('hidden', t.id!==id);
+  });
+  history.replaceState(null,'',`#${id}`);
+}
+
+// ---------- Drawer (project details) ----------
+function openDrawer(tab,id){
+  const data = (SITE.projects[tab]||[]).find(p=>p.id===id); if(!data) return;
+  document.getElementById('drawerTitle').textContent = data.title;
+  document.getElementById('drawerTag').textContent = data.tag||'';
+  const met = document.getElementById('drawerMetrics'); met.innerHTML='';
+  (data.metrics||[]).forEach(m=>{ const s=document.createElement('span'); s.className='text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-900/60'; s.textContent=m; met.appendChild(s); });
+  document.getElementById('drawerTeaser').textContent = data.teaser||'';
+  const body = document.getElementById('drawerBody'); body.innerHTML='';
+  (data.body||[]).forEach(b=>{ const li=document.createElement('li'); li.textContent=b; body.appendChild(li); });
+  const links = document.getElementById('drawerLinks'); links.innerHTML='';
+  (data.links||[]).forEach(l=>{ const a=document.createElement('a'); a.className='px-3 py-2 text-sm rounded-xl bg-brand-600 text-white hover:bg-brand-700'; a.href=l.url; a.target='_blank'; a.rel='noopener'; a.textContent=l.label; links.appendChild(a); });
+  document.getElementById('drawer').classList.remove('hidden');
+}
+function closeDrawer(){ document.getElementById('drawer').classList.add('hidden'); }
+
+// ---------- Command palette ----------
+const cmdBtn = document.getElementById('cmdBtn');
+function toggleCmd(force){ const wrap=document.getElementById('cmdk'); wrap.classList[force===false?'add':'toggle']('hidden'); if(!wrap.classList.contains('hidden')){ document.getElementById('cmdInput').focus(); renderCmd(''); } }
+if(cmdBtn){ cmdBtn.addEventListener('click',()=>toggleCmd()); }
+window.addEventListener('keydown', (e)=>{ if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){ e.preventDefault(); toggleCmd(); } });
+function renderCmd(q){
+  const items = [
+    {label:'Go to Home', action:()=>location.hash='#home'},
+    {label:'Go to Work', action:()=>location.hash='#work'},
+    {label:'Go to Projects', action:()=>location.hash='#projects'},
+    {label:'Go to About', action:()=>location.hash='#about'},
+    {label:'Go to Contact', action:()=>location.hash='#contact'},
+    ...SITE.tabs.flatMap(t=> (SITE.projects[t.id]||[]).map(p=>({label:`Open: ${p.title}`, action:()=>openDrawer(t.id,p.id)})))
+  ];
+  const box = document.getElementById('cmdResults'); box.innerHTML='';
+  items.filter(i=>i.label.toLowerCase().includes(q.toLowerCase())).forEach(i=>{
+    const b=document.createElement('button'); b.className='w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800'; b.textContent=i.label; b.onclick=()=>{ i.action(); toggleCmd(false); }; box.appendChild(b);
+  });
+}
+const cmdInput=document.getElementById('cmdInput'); if(cmdInput){ cmdInput.addEventListener('input', e=>renderCmd(e.target.value)); }
+
+// ---------- Contact form submit ----------
+const form = document.getElementById('contactForm');
+if(form){
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const status = document.getElementById('formStatus'); status.textContent = 'Sending…';
+    const data = new FormData(form);
+    try{
+      if(FORM_ENDPOINT && FORM_ENDPOINT !== '#'){
+        const res = await fetch(FORM_ENDPOINT, { method:'POST', body:data, headers:{ 'Accept':'application/json' }});
+        if(res.ok){ form.reset(); status.textContent = 'Thanks! I will get back to you soon.'; }
+        else{ status.textContent = 'Error sending. Check endpoint or try again.'; }
+      } else {
+        // mailto fallback
+        const name = encodeURIComponent(data.get('name')); const email = encodeURIComponent(data.get('email')); const msg = encodeURIComponent(data.get('message'));
+        window.location.href = `mailto:${SITE.person.email}?subject=Portfolio%20Contact%20from%20${name}&body=From:%20${email}%0A%0A${msg}`;
+        status.textContent = 'Opened your email client (since no endpoint is set).';
+      }
+    }catch(err){ status.textContent = 'Network error. Please try again.'; }
+  });
+}
+
+// ---------- Init ----------
+function init(){
+  document.getElementById('year').textContent = new Date().getFullYear();
+  renderHero();
+  renderTabs();
+}
+init();
+</script>
+
 </body>
 </html>
