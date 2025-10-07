@@ -106,129 +106,222 @@ const SITE = {
     }]
   },
 
-  /* ================== SKILLS (with relevance to candidature) ================== */
+  /* ================== SKILLS (with deep examples + relevance) ================== */
   skillCategories:[
     {id:'leadership', title:'Leadership & Management'},
     {id:'operations', title:'Operations & Strategy'},
     {id:'product', title:'Product & Business'},
     {id:'analytics', title:'Analytics & AI'}
   ],
+  // Filter options shown above the grid (core buckets first)
   rolesUniverse:[
-    'People Leadership','Operations','Program Management','Product Management','Business Analysis','Analytics & AI'
+    'People Leadership',
+    'Project/Program Management',
+    'Product Management/Ownership',
+    'Business Analysis/Operational Excellence',
+    'Analytics & AI',
+    'Operations'
   ],
   skills:[
-    {id:'people-mgmt', cat:'leadership', name:'People Management', years:8,
-      roles:['People Leadership','Operations','Program Management'],
-      why:'Built high-performing teams across EA and Amazon. Mentored analysts, managed contractors, ran hiring loops, and instituted operating rhythms that improved throughput and reduced overtime.',
-      badges:['Mentoring','Hiring','Performance','Org rhythm'],
+    /* ======== CORE BUCKET: People Leadership ======== */
+    {id:'people-mgmt', cat:'leadership', name:'People Leadership / Team Management', years:8,
+      roles:['People Leadership','Project/Program Management','Operations'],
+      why:'Built high-performing teams across EA and Amazon—clear goals, coaching, hiring, and rhythms that improved throughput and reduced overtime.',
+      badges:['Mentoring','Hiring','Performance','Operating rhythm'],
       metrics:['Led 25-member team (Amazon)','80% tool adoption (change mgmt)','-15% overtime'],
-      tools:['WFM','1:1s & Reviews','Succession planning','Coaching frameworks'],
+      tools:['WFM','1:1s & Reviews','Succession planning','Competency matrix'],
       examples:[
-        {role:'EA – Manager (Business Analysis), Operational Excellence',period:'2023–Present',
-         bullets:['Org-wide efficiency tracking across 14 teams; prioritized 40+ projects.',
-                  'Resolved cross-team bottlenecks; ~20% workflow efficiency uplift.']},
-        {role:'EA – Lead Project Manager, Real Time Ops',period:'2019–2023',
-         bullets:['Directed BI & contractor teams; delivered 40+ dashboards.']},
-        {role:'Amazon – Manager/Senior Risk Investigator',period:'2014–2019',
-         bullets:['Led 25-member team for Business Account registrations & investigations.',
-                  'Employee of the Year: 2017 & 2018.']}
+        {role:'EA – OpEx & Business Analysis (Team Lead)',period:'2023–Present',
+         bullets:[
+           'Set 30/60/90 onboarding plans and competency ladders for analysts and contractors.',
+           'Established weekly 1:1s, quarterly growth plans, and peer-coaching pods.',
+           'Built follow-the-sun coverage for IST/EST; stabilized on-call rotations.'
+         ]},
+        {role:'EA – Cross‑functional Working Group (Ops + DS + Product)',period:'2022–2024',
+         bullets:[
+           'Facilitated triad ceremonies; unblocked cross-team dependencies within 48–72 hours.',
+           'Aligned priorities using a simple RICE/impact canvas for transparent trade‑offs.'
+         ]},
+        {role:'EA – Real Time Ops',period:'2019–2023',
+         bullets:[
+           'Directed BI & contractor teams; delivered 40+ dashboards and automations.',
+           'Introduced feedback rituals (demo days/retros) → faster iteration cycles.'
+         ]},
+        {role:'Amazon – Buyer Risk (Team Manager/SME)',period:'2014–2019',
+         bullets:[
+           'Led a 25‑member team for Business Account registrations & investigations.',
+           'Owned shift management, QA program, and SOP/SLAs; Employee of the Year (2017, 2018).'
+         ]}
       ],
-      relatedProjects:['bottlenecks','ops-suite']
+      relatedProjects:['bottlenecks','ops-suite','bi-portfolio']
     },
+
+    /* ======== CORE BUCKET: Project / Program Management ======== */
     {id:'project-mgmt', cat:'leadership', name:'Project Management', years:6,
-      roles:['Program Management','Operations','Product Management'],
-      why:'Turned strategy into executable plans, managing scope, timelines, stakeholders, and RAID. Delivered analytics assets and change initiatives on time.',
+      roles:['Project/Program Management','Operations','Product Management/Ownership'],
+      why:'Turned strategy into executable plans—managing scope, timelines, RAID, stakeholders, and vendor delivery.',
       badges:['Scope','Schedule','Risk','Stakeholders'],
-      metrics:['40+ dashboards delivered','On-time product launches'],
+      metrics:['40+ dashboards delivered','On‑time product launches'],
       tools:['PRINCE2','Gantt/Kanban','RAID','RACI'],
       examples:[
-        {role:'EA – Lead Project Manager (RTO)',period:'2019–2023',
-         bullets:['Project Academy II; supported digital revenue incl. ~$14M Sims pilot.',
-                  'Capacity planning & shifts; overtime costs -15%.']}
+        {role:'EA – Tool migration (RTO)',period:'2020–2022',
+         bullets:[
+           'Built cutover plan, training, and adoption KPIs → 80% utilization; decision speed +50%.',
+           'Coordinated UAT and phased rollouts with clear rollback criteria.'
+         ]},
+        {role:'EA – BI Delivery Program',period:'2019–2023',
+         bullets:[
+           'Maintained backlog and milestones; tracked critical path across 14 teams.',
+           'Delivered 40+ dashboards; introduced definition‑of‑done & acceptance criteria.'
+         ]},
+        {role:'EA – Vendor onboarding',period:'2021',
+         bullets:[
+           'Requirements capture, SOW definition, and commercials tracking → ~10% cost reduction.',
+           'Implemented service review cadence with SLAs and escalation rules.'
+         ]},
+        {role:'EA – Revenue Pilot (The Sims)',period:'2021–2022',
+         bullets:[
+           'Owned schedule/risks & executive updates; landed pilot milestones (~$14M impact).'
+         ]}
       ],
-      relatedProjects:['rev-sims','bi-portfolio']
+      relatedProjects:['rev-sims','bi-portfolio','bottlenecks']
     },
     {id:'program-mgmt', cat:'leadership', name:'Program Management', years:4,
-      roles:['Program Management','Operations'],
-      why:'Established governance, prioritization, and cadence. Connected VMOST to KPIs, driving cross-team alignment and systematic blocker removal.',
+      roles:['Project/Program Management','Operations'],
+      why:'Established governance and portfolio flow—prioritization, quarterly planning, and KPI reviews that kept teams aligned.',
       badges:['Roadmaps','Governance','OKRs'],
-      metrics:['40+ projects prioritized','Cross-org cadence'],
+      metrics:['40+ projects prioritized','Cross‑org cadence'],
       tools:['Portfolio Kanban','Quarterly Reviews','Change control'],
       examples:[
-        {role:'EA – OpEx Program',period:'2023–Present',
-         bullets:['VMOST facilitation; org-wide KPI operating rhythm.',
-                  'Removed systemic blockers; throughput ↑.']}
+        {role:'EA – OpEx Portfolio',period:'2023–Present',
+         bullets:[
+           'Created intake → triage → prioritization funnel; 40+ projects organized by impact.',
+           'Quarterly planning and dependency mapping across 14 teams.'
+         ]},
+        {role:'EA – KPI Operating Cadence',period:'2023–Present',
+         bullets:[
+           'Monthly/Quarterly reviews with standardized scorecards and drilldowns.',
+           'Linked VMOST to KPIs; made trade‑offs visible at exec review.'
+         ]},
+        {role:'EA – Change Management Program',period:'2020–2022',
+         bullets:[
+           'Champions network, enablement sessions, and comms plan → sustained adoption.'
+         ]}
       ],
       relatedProjects:['ops-suite','bottlenecks']
     },
 
+    /* ======== CORE BUCKET: Business Analysis & Operational Excellence ======== */
+    {id:'biz-analysis', cat:'product', name:'Business Analysis', years:5,
+      roles:['Business Analysis/Operational Excellence','Product Management/Ownership','Operations'],
+      why:'Turned goals into measurable requirements; clarified data lineage & acceptance criteria for trustworthy decisions.',
+      badges:['BCS Diploma','Requirements','KPI frameworks'],
+      metrics:['40+ dashboards','Cross‑functional clarity'],
+      tools:['Process modeling','User stories','Data lineage'],
+      examples:[
+        {role:'EA – VMOST → KPI Mapping',period:'2023–Present',
+         bullets:[
+           'Interviewed stakeholders; translated strategy into KPIs and scorecards.',
+           'Defined data contracts and ownership; reduced reporting drift.'
+         ]},
+        {role:'EA – BRDs & Acceptance Criteria',period:'2020–2024',
+         bullets:[
+           'Wrote BRDs/PRDs for internal analytics tooling; aligned DS/Eng/Product/Ops.',
+           'Authored acceptance tests for data quality and user outcomes.'
+         ]},
+        {role:'Amazon – Buyer Risk (B2B)',period:'2014–2019',
+         bullets:[
+           'Modeled onboarding flows & risk signals; standardized SOP/SLAs.',
+           'Partnered with policy, compliance, and support for end‑to‑end coverage.'
+         ]}
+      ],
+      relatedProjects:['ops-suite','bi-portfolio','bottlenecks']
+    },
     {id:'op-ex', cat:'operations', name:'Operational Excellence', years:5,
-      roles:['Operations','Program Management','Business Analysis'],
-      why:'Designed KPI frameworks, value-stream improvements, and review mechanisms that made performance visible and actionable.',
+      roles:['Business Analysis/Operational Excellence','Project/Program Management','Operations'],
+      why:'Designed value‑stream improvements and review mechanisms that turned performance into action.',
       badges:['VMOST','KPI design','Value stream'],
       metrics:['~20% workflow efficiency','~45% improvement opps found'],
       tools:['Lean','Process mapping','Root cause'],
       examples:[
-        {role:'EA – Manager (Business Analysis)',period:'2023–Present',
-         bullets:['Instituted KPIs revealing ~45% improvement opportunities.',
-                  'Leadership drilldowns by team/product/time.']}
+        {role:'EA – Kaizen & Value‑stream mapping',period:'2023–Present',
+         bullets:[
+           'Mapped handoffs; eliminated low‑value steps; instituted WIP limits.',
+           'Drilldown dashboards exposed queues → faster triage and cycle‑time reduction.'
+         ]},
+        {role:'EA – KPI Suite as a Product',period:'2023–Present',
+         bullets:[
+           'Onboarding guides & office hours for leaders; unified definitions and drilldowns.'
+         ]},
+        {role:'EA – Vendor efficiencies',period:'2023–2024',
+         bullets:[
+           'Vendor renegotiations and playbooks → ~10% cost saving without quality loss.'
+         ]}
       ],
       relatedProjects:['ops-suite','bottlenecks']
     },
     {id:'lean-six', cat:'operations', name:'Lean & Six Sigma (Black Belt)', years:3,
-      roles:['Operations','Business Analysis'],
-      why:'Used DMAIC and waste reduction techniques to reduce cycle times and vendor costs; standardized definitions to cut rework.',
+      roles:['Business Analysis/Operational Excellence','Operations'],
+      why:'Applied DMAIC to reduce cycle times and defects; standardized templates to cut rework.',
       badges:['Black Belt','DMAIC','Waste reduction'],
       metrics:['10% vendor cost saving','50%+ report build time ↓'],
       tools:['Fishbone','Pareto','Control charts'],
       examples:[
         {role:'EA – OpEx',period:'2023–Present',
-         bullets:['Negotiated vendor contracts; ~10% cost reduction.',
-                  'Templates + governed sources cut report time 50%+.']}
+         bullets:[
+           'Root‑cause workshops and control plans for sustained improvement.',
+           'Templates + governed data sources cut report time 50%+.'
+         ]}
       ],
       relatedProjects:['ops-suite']
     },
     {id:'process-opt', cat:'operations', name:'Process Optimization', years:5,
-      roles:['Operations','Program Management'],
-      why:'Mapped handoffs, set WIP caps, and clarified SOPs/SLAs to drive decision speed and reduce overtime.',
+      roles:['Business Analysis/Operational Excellence','Project/Program Management','Operations'],
+      why:'Introduced SOPs/SLAs, WIP caps, and clearer handoffs to raise decision speed and reduce overtime.',
       badges:['Handoffs','WIP caps','SOPs/SLAs'],
       metrics:['Decision speed +50%','Overtime -15%'],
       tools:['SIPOC','RCA','Playbooks'],
       examples:[
         {role:'EA – RTO & OpEx',period:'2019–Present',
-         bullets:['Change management → 80% tool utilization; decision efficiency +50%.',
-                  'Capacity rebalancing cut overtime by 15%.']}
+         bullets:[
+           'Change management → 80% tool utilization; decision efficiency +50%.',
+           'Capacity rebalancing and queue management reduced overtime by 15%.'
+         ]}
       ],
       relatedProjects:['bottlenecks']
     },
 
-    {id:'product-mgmt', cat:'product', name:'Product Management', years:5,
-      roles:['Product Management','Program Management'],
-      why:'Shaped experiments and outcomes with KPIs, guardrails, and executive-facing visuals; collaborated across engineering, analytics, and ops.',
+    /* ======== CORE BUCKET: Product Management / Ownership ======== */
+    {id:'product-mgmt', cat:'product', name:'Product Management / Ownership', years:5,
+      roles:['Product Management/Ownership','Project/Program Management'],
+      why:'Defined outcomes and guardrails, translated user needs into PRDs/backlogs, and iterated with analytics and DS.',
       badges:['Experiments','North Star','Stakeholders'],
       metrics:['Q1 launch targets hit','~$14M pilot impact'],
       tools:['PRDs','Backlogs','A/B'],
       examples:[
         {role:'EA – Revenue Pilot (The Sims)',period:'2021–2022',
-         bullets:['Defined KPIs & guardrails; test/control views; weekly narrative.']}
+         bullets:[
+           'PRDs with clear success metrics and guardrails; test/control instrumentation.',
+           'Ran UAT; synthesized insights into weekly exec narratives.'
+         ]},
+        {role:'EA – Internal Ops Tooling Roadmap',period:'2020–2024',
+         bullets:[
+           'Backlog grooming with stakeholders; prioritized by impact and effort.',
+           'Release notes, in‑product tips, and office hours → improved adoption.'
+         ]},
+        {role:'EA – KPI Suite as a Product',period:'2023–Present',
+         bullets:[
+           'Onboarding, help docs, and usage analytics to drive self‑serve behavior.',
+           'Closed feedback loops; reduced ad‑hoc report requests.'
+         ]}
       ],
-      relatedProjects:['rev-sims']
+      relatedProjects:['rev-sims','ops-suite','bi-portfolio']
     },
-    {id:'biz-analysis', cat:'product', name:'Business Analysis', years:5,
-      roles:['Business Analysis','Operations','Product Management'],
-      why:'Converted business goals into measurable requirements; clarified data lineage and ownership for trustworthy decisions.',
-      badges:['BCS Diploma','Requirements','KPI frameworks'],
-      metrics:['40+ dashboards','Cross-functional clarity'],
-      tools:['Process modeling','User stories','Data lineage'],
-      examples:[
-        {role:'EA – Business Analysis',period:'2023–Present',
-         bullets:['Mapped VMOST to measurable KPIs for multiple business units.']}
-      ],
-      relatedProjects:['ops-suite','bi-portfolio']
-    },
+
+    /* ======== Supporting analytics / AI skills (kept concise) ======== */
     {id:'kpi-okrs', cat:'product', name:'KPI Frameworks & OKRs', years:5,
-      roles:['Business Analysis','Operations','Program Management'],
-      why:'Created a single source of truth for performance; connected strategy to execution with reviews and scorecards.',
+      roles:['Business Analysis/Operational Excellence','Project/Program Management'],
+      why:'Single source of truth for performance; connected strategy to execution with reviews and scorecards.',
       badges:['VMOST','Scorecards','Cadence'],
       metrics:['Single source of truth','Leadership alignment'],
       tools:['OKR reviews','Scorecards','Drilldowns'],
@@ -238,50 +331,55 @@ const SITE = {
       ],
       relatedProjects:['ops-suite']
     },
-
     {id:'aiml-impl', cat:'analytics', name:'AI/ML Implementation (Non‑Tech)', years:3,
-      roles:['Analytics & AI','Operations','Product Management'],
-      why:'Drove business‑led feasibility, HITL design, and adoption—achieving major effort reduction and accuracy lift without writing model code.',
+      roles:['Analytics & AI','Business Analysis/Operational Excellence','Product Management/Ownership','Operations'],
+      why:'Drove business‑led feasibility, HITL design, and adoption—achieving effort reduction and accuracy lift without writing model code.',
       badges:['Feasibility','HITL','Rollout'],
       metrics:['~60% manual ↓','~35% accuracy ↑'],
       tools:['A/B baselines','Guardrails','Change mgmt'],
       examples:[
         {role:'EA – OpEx & Data Science',period:'2023–Present',
-         bullets:['Automated triage & QA augmentation with human-in-the-loop.',
-                  'Success criteria & precision/recall gates defined up front.']}
+         bullets:[
+           'Automated triage & QA augmentation with human‑in‑the‑loop safeguards.',
+           'Defined precision/recall gates and operational runbooks for scale.'
+         ]}
       ],
       relatedProjects:['ml-rollout']
     },
     {id:'bi-analytics', cat:'analytics', name:'BI & Analytics (Tableau/Power BI/SQL/DAX)', years:5,
-      roles:['Analytics & AI','Business Analysis','Operations'],
+      roles:['Analytics & AI','Business Analysis/Operational Excellence'],
       why:'Built governed, self‑serve analytics that sped up decisions while keeping definitions consistent.',
-      badges:['Self-serve','Governed','Automation'],
+      badges:['Self‑serve','Governed','Automation'],
       metrics:['15+ dashboards','Faster decisions'],
       tools:['Tableau','Power BI','SQL','DAX'],
       examples:[
         {role:'EA – BI Portfolio',period:'2019–2023',
-         bullets:['Directed BI team; delivered 40+ dashboards & automation.',
-                  'Faster reporting; standardized definitions.']}
+         bullets:[
+           'Directed BI team; delivered 40+ dashboards & automation.',
+           'Standardized definitions and data lineage; reduced duplication.'
+         ]}
       ],
       relatedProjects:['bi-portfolio','ops-suite']
     },
     {id:'automation', cat:'analytics', name:'Automation & Metrics Visualization', years:5,
       roles:['Analytics & AI','Operations'],
-      why:'Cut manual reporting time and gave leaders clear, narrative dashboards with refresh SLAs.',
+      why:'Cut manual reporting time and gave leaders clear narratives with refresh SLAs.',
       badges:['Refresh SLAs','Narratives','Data contracts'],
       metrics:['Report time -50%','Leaders unblocked'],
       tools:['Pipelines','Templates','Storytelling'],
       examples:[
         {role:'EA – Analytics Enablement',period:'2019–Present',
-         bullets:['Automated weekly narratives; ensured clear ownership & SLAs.']}
+         bullets:[
+           'Automated weekly narratives; ensured ownership & SLAs for reliability.'
+         ]}
       ],
       relatedProjects:['bi-portfolio','ops-suite']
     }
   ]
 };
 
-// Contact backend endpoint (Formspree/Netlify). Replace "#" with your URL to enable sending.
-const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj"; // e.g., "https://formspree.io/f/xxxxxxx"
+// === Contact backend endpoint (Formspree/Netlify). Already enabled per your request. ===
+const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
 </script>
 
 <!-- ================== NAVBAR ================== -->
@@ -423,8 +521,7 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj"; // e.g., "https://forms
       </div>
     </div>
     <div>
-      <div class="rounded-3xl bg-white dark:bg-slate-8
-00 p-6 shadow-sm ring-1 ring-black/5">
+      <div class="rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5">
         <h3 class="font-semibold">Quick Facts</h3>
         <ul class="mt-4 space-y-2 text-sm">
           <li>📍 Hyderabad, India</li>
@@ -440,7 +537,7 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj"; // e.g., "https://forms
   </div>
 </section>
 
-<!-- ================== CONTACT (READY FOR BACKEND) ================== -->
+<!-- ================== CONTACT (Formspree enabled) ================== -->
 <section id="contact" class="py-12 bg-white dark:bg-slate-950/40">
   <div class="max-w-7xl mx-auto px-4">
     <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
@@ -455,17 +552,16 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj"; // e.g., "https://forms
             <button type="submit" class="inline-flex justify-center items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Send</button>
             <span id="formStatus" class="text-sm text-slate-500"></span>
           </div>
-          <p class="text-xs text-slate-500">Backend-ready: set <code>FORM_ENDPOINT</code> at the top to your Formspree/Netlify endpoint and it will send emails.</p>
+          <p class="text-xs text-slate-500">This form is live and sends via Formspree.</p>
         </div>
       </form>
 
       <div class="rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5">
-        <h3 class="font-semibold">How to enable the backend (1 min)</h3>
+        <h3 class="font-semibold">Tips</h3>
         <ol class="mt-3 space-y-2 text-sm list-decimal pl-5">
-          <li>Create a free account at Formspree (or use Netlify Forms if you host on Netlify).</li>
-          <li>Copy your endpoint URL, e.g. <span class="font-mono">https://formspree.io/f/xxxxxxx</span>.</li>
-          <li>In this file, find <span class="font-mono">const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";</span> and paste your URL there.</li>
-          <li>Commit the change. The form will start sending instantly.</li>
+          <li>Want a custom auto‑reply? Add a <span class="font-mono">_replyto</span> field or configure templates in Formspree.</li>
+          <li>Add spam protection with a honeypot field (Formspree settings).</li>
+          <li>Move to Netlify later? Switch the endpoint—no code changes beyond the URL.</li>
         </ol>
       </div>
     </div>
@@ -739,7 +835,7 @@ function renderCmd(q){
 }
 const cmdInput=document.getElementById('cmdInput'); if(cmdInput){ cmdInput.addEventListener('input', e=>renderCmd(e.target.value)); }
 
-// ---------- Contact form submit ----------
+// ---------- Contact form submit (Formspree enabled) ----------
 const form = document.getElementById('contactForm');
 if(form){
   form.addEventListener('submit', async (e)=>{
@@ -747,15 +843,9 @@ if(form){
     const status = document.getElementById('formStatus'); status.textContent = 'Sending…';
     const data = new FormData(form);
     try{
-      if(FORM_ENDPOINT && FORM_ENDPOINT !== '#'){
-        const res = await fetch(FORM_ENDPOINT, { method:'POST', body:data, headers:{ 'Accept':'application/json' }});
-        if(res.ok){ form.reset(); status.textContent = 'Thanks! I will get back to you soon.'; }
-        else{ status.textContent = 'Error sending. Check endpoint or try again.'; }
-      } else {
-        const name = encodeURIComponent(data.get('name')); const email = encodeURIComponent(data.get('email')); const msg = encodeURIComponent(data.get('message'));
-        window.location.href = `mailto:${SITE.person.email}?subject=Portfolio%20Contact%20from%20${name}&body=From:%20${email}%0A%0A${msg}`;
-        status.textContent = 'Opened your email client (since no endpoint is set).';
-      }
+      const res = await fetch(FORM_ENDPOINT, { method:'POST', body:data, headers:{ 'Accept':'application/json' }});
+      if(res.ok){ form.reset(); status.textContent = 'Thanks! I will get back to you soon.'; }
+      else{ status.textContent = 'Error sending. Please try again.'; }
     }catch(err){ status.textContent = 'Network error. Please try again.'; }
   });
 }
