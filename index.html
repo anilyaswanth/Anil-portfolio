@@ -28,7 +28,11 @@
     html{scroll-behavior:smooth}
     .glass{backdrop-filter:blur(10px);background:rgba(255,255,255,.7)}
     .dark .glass{background:rgba(2,6,23,.6)}
-  </style>
+  .pattern-skill{position:relative}
+.pattern-skill::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 20%, rgba(6,182,212,.08) 0 20%, transparent 20% 100%), radial-gradient(circle at 80% 0%, rgba(14,116,144,.08) 0 20%, transparent 20% 100%);pointer-events:none}
+.pattern-projects{background-image:linear-gradient(180deg,rgba(2,6,23,.03),transparent 40%)}
+.pattern-about{background-image:linear-gradient(90deg,rgba(6,182,212,.06) 0 1px,transparent 1px),linear-gradient(180deg,rgba(6,182,212,.06) 0 1px,transparent 1px);background-size:24px 24px}
+</style>
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200">
 
@@ -36,12 +40,12 @@
 <script>
 const SITE = {
   person:{
-    name:'Anil Yaswanth',
+    name:'Anil Yaswanth V',
     title:'Operational Excellence • Business Analysis • AI/ML Enablement',
-    summary:'I help teams ship faster and smarter by turning ambiguous ops problems into measurable outcomes—leaner workflows, sharp KPIs, and automation where it matters.',
-    location:'Hyderabad, India', phone:'+91-8125293949', email:'anil.yaswanth@gmail.com',
+    summary:'Operations & product leader blending an International Diploma in Business Analysis with PRINCE2 Practitioner and Lean Six Sigma Black Belt. 8+ yrs people leadership, 5+ yrs product/BA, 5 yrs OpEx. I connect strategy (VMOST/OKRs) → measurable KPIs → shipped outcomes: 15+ projects/products, AI/ML enablement (non‑tech), and automation that cut manual effort ~60% with ~35% accuracy lift.',
+    location:'Hyderabad, India', phone:'+91-8125293949', email:'anil.yaswanth@gmail.com', photo:'anil-dp.png',
     links:[
-      {label:'LinkedIn', url:'#'},
+      {label:'LinkedIn', url:'https://www.linkedin.com/in/anil-yaswanth-v-a6935587/'},
       {label:'GitHub', url:'#'},
       {label:'Download Resume (PDF)', url:'#'}
     ]
@@ -50,7 +54,8 @@ const SITE = {
     {k:'Efficiency Uplift', v:'+20%'},
     {k:'Manual Effort ↓', v:'~60%'},
     {k:'Accuracy ↑', v:'~35%'},
-    {k:'Dashboards', v:'15+'}
+    {k:'Projects/Products', v:'15+'},
+    {k:'Revenue Saves', v:'~14M$'}
   ],
   certifications:[
     {name:'Lean Six Sigma Black Belt', date:'Jun 2023'},
@@ -61,12 +66,13 @@ const SITE = {
 
   /* ================== PROJECTS (tabs) ================== */
   tabs:[
-    {id:'case-studies', icon:'📊', title:'Case Studies', desc:'Deep dives with approach → KPIs → outcomes.'},
+    {id:'process', icon:'📊', title:'Process Optimization', desc:'Deep dives with approach → KPIs → outcomes.'},
+    {id:'product-ownership', icon:'🧭', title:'Product Ownership Projects', desc:'PRDs, roadmaps, outcomes.'},
     {id:'dashboards', icon:'📈', title:'Dashboards', desc:'Tableau, Power BI, SQL, DAX.'},
     {id:'ai-ml', icon:'🤖', title:'AI/ML', desc:'Feasibility, rollout, automation & quality.'}
   ],
   projects:{
-    'case-studies':[{ id:'ops-suite', tag:'Ops • BI', title:'Operational Excellence Dashboard Suite', metrics:['15+ dashboards','KPI surfacing','~45% opps found'],
+    'process':[{ id:'ops-suite', tag:'Ops • BI', title:'Operational Excellence Dashboard Suite', metrics:['15+ dashboards','KPI surfacing','~45% opps found'],
       teaser:'Unified KPI platform across 14 teams; revealed ~45% improvement areas in year one.',
       body:[
         'Mapped VMOST to KPIs; standardized definitions & lineage to remove reporting drift.',
@@ -88,6 +94,15 @@ const SITE = {
     },{ id:'bi-portfolio', tag:'Analytics', title:'BI Portfolio', metrics:['40+ dashboards'],
       teaser:'Self-serve analytics for ops, capacity, and risk.',
       body:['Tableau/Power BI with SQL/DAX models; refresh SLAs & ownership clearly defined.']
+    }],
+    'product-ownership':[{
+      id:'ops-tooling', tag:'Ownership', title:'Internal Ops Tooling Roadmap', metrics:['Adoption ↑','Backlog governance'],
+      teaser:'Owned roadmap, PRDs, and release notes for internal ops tools.',
+      body:['Prioritized features with impact/effort; ran UAT','Drove adoption with in-product tips and office hours']
+    },{
+      id:'kpi-suite', tag:'Product', title:'KPI Suite as a Product', metrics:['Self‑serve adoption','Unified definitions'],
+      teaser:'Treating analytics as a product to reduce ad‑hoc requests and improve trust.',
+      body:['Onboarding & help docs','Usage analytics & feedback loops']
     }],
     'ai-ml':[{
       id:'ml-rollout', tag:'Automation', title:'AI/ML Rollout Across 3 Domains', metrics:['~60% manual ↓','~35% accuracy ↑'],
@@ -354,7 +369,7 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
 <header class="sticky top-0 z-50 glass border-b border-slate-200/60 dark:border-slate-800/60">
   <div class="max-w-7xl mx-auto px-4">
     <div class="h-16 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-2 font-semibold"><span class="h-8 w-8 rounded-xl bg-brand-600 text-white grid place-items-center">AY</span><span>Anil Yaswanth</span></a>
+      <a href="#home" class="flex items-center gap-2 font-semibold"><span class="h-8 w-8 rounded-xl bg-brand-600 text-white grid place-items-center">AV</span><span>Anil Yaswanth</span></a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#skills" class="hover:text-brand-700 dark:hover:text-brand-300">Skills</a>
         <a href="#projects" class="hover:text-brand-700 dark:hover:text-brand-300">Projects</a>
@@ -375,6 +390,7 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
   <div class="max-w-7xl mx-auto px-4 py-14">
     <div class="grid lg:grid-cols-2 gap-10 items-center">
       <div>
+        <img id="heroPhoto" alt="Anil Yaswanth" class="w-28 h-28 rounded-full ring-4 ring-white dark:ring-slate-800 shadow-lg object-cover mb-4 hidden"/>
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white" id="heroName"></h1>
         <p class="mt-3 text-lg md:text-xl text-slate-700 dark:text-slate-300" id="heroTitle"></p>
         <p class="mt-4 max-w-2xl text-slate-600 dark:text-slate-400" id="heroSummary"></p>
@@ -391,7 +407,7 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
 </section>
 
 <!-- ================== UNIFIED SKILLS EXPLORER ================== -->
-<section id="skills" class="py-12 bg-white dark:bg-slate-950/40">
+<section id="skills" class="relative py-12 bg-gradient-to-br from-brand-50 via-white to-brand-100 dark:from-slate-950/60 dark:via-slate-950/40 dark:to-slate-900 pattern-skill">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex items-end justify-between flex-wrap gap-3">
       <h2 class="text-2xl md:text-3xl font-bold">Skills Explorer</h2>
@@ -441,7 +457,7 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
 </div>
 
 <!-- ================== PROJECTS (TABS + DRAWER) ================== -->
-<section id="projects" class="py-12">
+<section id="projects" class="py-12 bg-white dark:bg-slate-900/40 pattern-projects">
   <div class="max-w-7xl mx-auto px-4">
     <h2 class="text-2xl md:text-3xl font-bold">Projects</h2>
     <div id="tabHeader" class="mt-6 flex flex-wrap gap-2"></div>
@@ -466,12 +482,12 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
 </div>
 
 <!-- ================== ABOUT (single column details + Certifications) ================== -->
-<section id="about" class="py-12">
+<section id="about" class="py-12 pattern-about">
   <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
     <div>
       <h2 class="text-2xl md:text-3xl font-bold">About</h2>
       <p class="mt-4 text-slate-700 dark:text-slate-300">
-        I design systems that make great work repeatable—strategy → metrics → execution. My toolkit includes VMOST, value-stream mapping, KPI frameworks, and BI (Tableau/Power BI/SQL/DAX). I love shaping AI/ML adoption with clear success criteria and responsible guardrails.
+        With an International Diploma in Business Analysis, PRINCE2 Practitioner, and Lean Six Sigma Black Belt, I bridge business goals and delivery. I’ve led teams (8+ yrs) and owned product/BA initiatives (5+ yrs) to turn VMOST/OKRs into actionable KPIs and shipped outcomes—15+ projects/products, AI/ML enablement (non‑tech), and automation that reduced manual effort ~60% while improving accuracy ~35%.
       </p>
       <div class="mt-6">
         <h3 class="font-semibold">Certifications</h3>
@@ -557,6 +573,15 @@ function renderHero(){
     a.className = 'inline-flex items-center gap-2 px-3 py-2 text-sm rounded-xl bg-white dark:bg-slate-800 ring-1 ring-slate-200 dark:ring-slate-700 shadow hover:shadow-md';
     a.href=l.url; a.target='_blank'; a.rel='noopener'; a.textContent=l.label; links.appendChild(a);
   });
+  const img = document.getElementById('heroPhoto');
+  if(img){
+    const candidates = [SITE.person.photo, 'anil-dp.png', 'DP Picture.png'].filter(Boolean);
+    if(candidates.length){
+      img.src = candidates[0];
+      img.onerror = ()=>{ img.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=256&auto=format&fit=crop'; };
+      img.classList.remove('hidden');
+    }
+  }
   const kpi = document.getElementById('kpiGrid'); kpi.innerHTML='';
   SITE.impact.forEach(i=>{
     const card = document.createElement('div');
