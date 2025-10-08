@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Anil Yaswanth | Interactive Portfolio</title>
-  <meta name="description" content="Anil Yaswanth’s interactive portfolio—Skills Explorer linked to real work, case studies, dashboards, AI/ML rollouts, and a backend-ready contact form." />
+  <meta name="description" content="Anil Yaswanth’s interactive portfolio—Unified Skills Explorer linked to real work, case studies, AI/ML rollouts, and a live contact form." />
   <meta name="theme-color" content="#06b6d4" />
   <meta property="og:title" content="Anil Yaswanth – Interactive Portfolio" />
   <meta property="og:description" content="Operational Excellence • Business Analysis • AI/ML Enablement" />
@@ -28,12 +28,11 @@
     html{scroll-behavior:smooth}
     .glass{backdrop-filter:blur(10px);background:rgba(255,255,255,.7)}
     .dark .glass{background:rgba(2,6,23,.6)}
-    @media (prefers-reduced-motion:no-preference){ .spin-slow{animation:spin 8s linear infinite} }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200">
 
-<!-- ================== CONTENT MODEL (Edit these objects only) ================== -->
+<!-- ================== CONTENT MODEL ================== -->
 <script>
 const SITE = {
   person:{
@@ -67,31 +66,26 @@ const SITE = {
     {id:'ai-ml', icon:'🤖', title:'AI/ML', desc:'Feasibility, rollout, automation & quality.'}
   ],
   projects:{
-    'case-studies':[{
-      id:'ops-suite', tag:'Ops • BI', title:'Operational Excellence Dashboard Suite', metrics:['15+ dashboards','KPI surfacing','~45% opps found'],
+    'case-studies':[{ id:'ops-suite', tag:'Ops • BI', title:'Operational Excellence Dashboard Suite', metrics:['15+ dashboards','KPI surfacing','~45% opps found'],
       teaser:'Unified KPI platform across 14 teams; revealed ~45% improvement areas in year one.',
       body:[
         'Mapped VMOST to KPIs; standardized definitions & lineage to remove reporting drift.',
         'Cut report build time by 50%+ via templates and governed data sources.',
         'Added drilldowns by team/product/time; leadership could spot blockers in minutes.'
-      ],
-      links:[{label:'Walkthrough (redacted)', url:'#'}]
-    },{
-      id:'bottlenecks', tag:'Ops • Strategy', title:'Cross-team Bottleneck Removal', metrics:['20% faster workflows','40+ projects prioritized','-15% overtime'],
+      ], links:[{label:'Walkthrough (redacted)', url:'#'}]
+    },{ id:'bottlenecks', tag:'Ops • Strategy', title:'Cross-team Bottleneck Removal', metrics:['20% faster workflows','40+ projects prioritized','-15% overtime'],
       teaser:'Value-stream mapping + WIP caps unblocked throughput for Real Time Ops.',
       body:[
         'Identified systemic blockers across handoffs; rebalanced capacity and shifts.',
         'Change plan → new tool adoption at 80% utilization; decision speed +50%.',
         'Vendor renegotiation saved ~10% without quality loss.'
-      ],
-      links:[{label:'One-pager', url:'#'}]
+      ], links:[{label:'One-pager', url:'#'}]
     }],
     'dashboards':[{
       id:'rev-sims', tag:'Revenue • BI', title:'Digital Revenue Pilot – The Sims', metrics:['~$14M pilot impact'],
       teaser:'Exec visuals + leading indicators to steer experiments.',
       body:['Defined north-star KPIs & guardrails; built test/control views; automated weekly narrative.']
-    },{
-      id:'bi-portfolio', tag:'Analytics', title:'BI Portfolio', metrics:['40+ dashboards'],
+    },{ id:'bi-portfolio', tag:'Analytics', title:'BI Portfolio', metrics:['40+ dashboards'],
       teaser:'Self-serve analytics for ops, capacity, and risk.',
       body:['Tableau/Power BI with SQL/DAX models; refresh SLAs & ownership clearly defined.']
     }],
@@ -106,14 +100,13 @@ const SITE = {
     }]
   },
 
-  /* ================== SKILLS (with deep examples + relevance) ================== */
+  /* ================== UNIFIED SKILLS EXPLORER ================== */
   skillCategories:[
     {id:'leadership', title:'Leadership & Management'},
     {id:'operations', title:'Operations & Strategy'},
     {id:'product', title:'Product & Business'},
     {id:'analytics', title:'Analytics & AI'}
   ],
-  // Filter options shown above the grid (core buckets first)
   rolesUniverse:[
     'People Leadership',
     'Project/Program Management',
@@ -123,7 +116,6 @@ const SITE = {
     'Operations'
   ],
   skills:[
-    /* ======== CORE BUCKET: People Leadership ======== */
     {id:'people-mgmt', cat:'leadership', name:'People Leadership / Team Management', years:8,
       roles:['People Leadership','Project/Program Management','Operations'],
       why:'Built high-performing teams across EA and Amazon—clear goals, coaching, hiring, and rhythms that improved throughput and reduced overtime.',
@@ -133,19 +125,19 @@ const SITE = {
       examples:[
         {role:'EA – OpEx & Business Analysis (Team Lead)',period:'2023–Present',
          bullets:[
-           'Set 30/60/90 onboarding plans and competency ladders for analysts and contractors.',
+           'Set 30/60/90 plans and competency ladders for analysts and contractors.',
            'Established weekly 1:1s, quarterly growth plans, and peer-coaching pods.',
-           'Built follow-the-sun coverage for IST/EST; stabilized on-call rotations.'
+           'Built follow-the-sun coverage; stabilized on-call rotations.'
          ]},
         {role:'EA – Cross‑functional Working Group (Ops + DS + Product)',period:'2022–2024',
          bullets:[
-           'Facilitated triad ceremonies; unblocked cross-team dependencies within 48–72 hours.',
-           'Aligned priorities using a simple RICE/impact canvas for transparent trade‑offs.'
+           'Facilitated triad ceremonies; unblocked dependencies within 48–72 hours.',
+           'Aligned priorities using a simple RICE/impact canvas.'
          ]},
         {role:'EA – Real Time Ops',period:'2019–2023',
          bullets:[
            'Directed BI & contractor teams; delivered 40+ dashboards and automations.',
-           'Introduced feedback rituals (demo days/retros) → faster iteration cycles.'
+           'Introduced demo days/retros → faster iteration cycles.'
          ]},
         {role:'Amazon – Buyer Risk (Team Manager/SME)',period:'2014–2019',
          bullets:[
@@ -156,7 +148,6 @@ const SITE = {
       relatedProjects:['bottlenecks','ops-suite','bi-portfolio']
     },
 
-    /* ======== CORE BUCKET: Project / Program Management ======== */
     {id:'project-mgmt', cat:'leadership', name:'Project Management', years:6,
       roles:['Project/Program Management','Operations','Product Management/Ownership'],
       why:'Turned strategy into executable plans—managing scope, timelines, RAID, stakeholders, and vendor delivery.',
@@ -166,22 +157,22 @@ const SITE = {
       examples:[
         {role:'EA – Tool migration (RTO)',period:'2020–2022',
          bullets:[
-           'Built cutover plan, training, and adoption KPIs → 80% utilization; decision speed +50%.',
-           'Coordinated UAT and phased rollouts with clear rollback criteria.'
+           'Cutover plan, training, and adoption KPIs → 80% utilization; decision speed +50%.',
+           'Coordinated UAT and phased rollouts with rollback criteria.'
          ]},
         {role:'EA – BI Delivery Program',period:'2019–2023',
          bullets:[
-           'Maintained backlog and milestones; tracked critical path across 14 teams.',
-           'Delivered 40+ dashboards; introduced definition‑of‑done & acceptance criteria.'
+           'Maintained backlog/milestones; tracked critical path across 14 teams.',
+           'Delivered 40+ dashboards; definition‑of‑done & acceptance criteria.'
          ]},
         {role:'EA – Vendor onboarding',period:'2021',
          bullets:[
-           'Requirements capture, SOW definition, and commercials tracking → ~10% cost reduction.',
-           'Implemented service review cadence with SLAs and escalation rules.'
+           'Requirements capture, SOW & commercials → ~10% cost reduction.',
+           'Service review cadence with SLAs and escalations.'
          ]},
         {role:'EA – Revenue Pilot (The Sims)',period:'2021–2022',
          bullets:[
-           'Owned schedule/risks & executive updates; landed pilot milestones (~$14M impact).'
+           'Owned schedule/risks & exec updates; landed pilot milestones (~$14M impact).'
          ]}
       ],
       relatedProjects:['rev-sims','bi-portfolio','bottlenecks']
@@ -201,7 +192,7 @@ const SITE = {
         {role:'EA – KPI Operating Cadence',period:'2023–Present',
          bullets:[
            'Monthly/Quarterly reviews with standardized scorecards and drilldowns.',
-           'Linked VMOST to KPIs; made trade‑offs visible at exec review.'
+           'Linked VMOST to KPIs; trade‑offs visible at exec review.'
          ]},
         {role:'EA – Change Management Program',period:'2020–2022',
          bullets:[
@@ -211,7 +202,6 @@ const SITE = {
       relatedProjects:['ops-suite','bottlenecks']
     },
 
-    /* ======== CORE BUCKET: Business Analysis & Operational Excellence ======== */
     {id:'biz-analysis', cat:'product', name:'Business Analysis', years:5,
       roles:['Business Analysis/Operational Excellence','Product Management/Ownership','Operations'],
       why:'Turned goals into measurable requirements; clarified data lineage & acceptance criteria for trustworthy decisions.',
@@ -221,7 +211,7 @@ const SITE = {
       examples:[
         {role:'EA – VMOST → KPI Mapping',period:'2023–Present',
          bullets:[
-           'Interviewed stakeholders; translated strategy into KPIs and scorecards.',
+           'Interviewed stakeholders; translated strategy into KPIs & scorecards.',
            'Defined data contracts and ownership; reduced reporting drift.'
          ]},
         {role:'EA – BRDs & Acceptance Criteria',period:'2020–2024',
@@ -291,7 +281,6 @@ const SITE = {
       relatedProjects:['bottlenecks']
     },
 
-    /* ======== CORE BUCKET: Product Management / Ownership ======== */
     {id:'product-mgmt', cat:'product', name:'Product Management / Ownership', years:5,
       roles:['Product Management/Ownership','Project/Program Management'],
       why:'Defined outcomes and guardrails, translated user needs into PRDs/backlogs, and iterated with analytics and DS.',
@@ -318,17 +307,13 @@ const SITE = {
       relatedProjects:['rev-sims','ops-suite','bi-portfolio']
     },
 
-    /* ======== Supporting analytics / AI skills (kept concise) ======== */
     {id:'kpi-okrs', cat:'product', name:'KPI Frameworks & OKRs', years:5,
       roles:['Business Analysis/Operational Excellence','Project/Program Management'],
       why:'Single source of truth for performance; connected strategy to execution with reviews and scorecards.',
       badges:['VMOST','Scorecards','Cadence'],
       metrics:['Single source of truth','Leadership alignment'],
       tools:['OKR reviews','Scorecards','Drilldowns'],
-      examples:[
-        {role:'EA – OpEx',period:'2023–Present',
-         bullets:['Instituted KPI cadence linking strategy to execution.']}
-      ],
+      examples:[{role:'EA – OpEx',period:'2023–Present', bullets:['Instituted KPI cadence linking strategy to execution.']}],
       relatedProjects:['ops-suite']
     },
     {id:'aiml-impl', cat:'analytics', name:'AI/ML Implementation (Non‑Tech)', years:3,
@@ -337,13 +322,7 @@ const SITE = {
       badges:['Feasibility','HITL','Rollout'],
       metrics:['~60% manual ↓','~35% accuracy ↑'],
       tools:['A/B baselines','Guardrails','Change mgmt'],
-      examples:[
-        {role:'EA – OpEx & Data Science',period:'2023–Present',
-         bullets:[
-           'Automated triage & QA augmentation with human‑in‑the‑loop safeguards.',
-           'Defined precision/recall gates and operational runbooks for scale.'
-         ]}
-      ],
+      examples:[{role:'EA – OpEx & Data Science',period:'2023–Present', bullets:['Automated triage & QA augmentation with human‑in‑the‑loop safeguards.','Defined precision/recall gates and operational runbooks for scale.']}],
       relatedProjects:['ml-rollout']
     },
     {id:'bi-analytics', cat:'analytics', name:'BI & Analytics (Tableau/Power BI/SQL/DAX)', years:5,
@@ -352,13 +331,7 @@ const SITE = {
       badges:['Self‑serve','Governed','Automation'],
       metrics:['15+ dashboards','Faster decisions'],
       tools:['Tableau','Power BI','SQL','DAX'],
-      examples:[
-        {role:'EA – BI Portfolio',period:'2019–2023',
-         bullets:[
-           'Directed BI team; delivered 40+ dashboards & automation.',
-           'Standardized definitions and data lineage; reduced duplication.'
-         ]}
-      ],
+      examples:[{role:'EA – BI Portfolio',period:'2019–2023', bullets:['Directed BI team; delivered 40+ dashboards & automation.','Standardized definitions and data lineage; reduced duplication.']}],
       relatedProjects:['bi-portfolio','ops-suite']
     },
     {id:'automation', cat:'analytics', name:'Automation & Metrics Visualization', years:5,
@@ -367,18 +340,13 @@ const SITE = {
       badges:['Refresh SLAs','Narratives','Data contracts'],
       metrics:['Report time -50%','Leaders unblocked'],
       tools:['Pipelines','Templates','Storytelling'],
-      examples:[
-        {role:'EA – Analytics Enablement',period:'2019–Present',
-         bullets:[
-           'Automated weekly narratives; ensured ownership & SLAs for reliability.'
-         ]}
-      ],
+      examples:[{role:'EA – Analytics Enablement',period:'2019–Present', bullets:['Automated weekly narratives; ensured ownership & SLAs for reliability.']}],
       relatedProjects:['bi-portfolio','ops-suite']
     }
   ]
 };
 
-// === Contact backend endpoint (Formspree/Netlify). Already enabled per your request. ===
+// Contact backend endpoint (Formspree) — enabled
 const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
 </script>
 
@@ -401,7 +369,7 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
   </div>
 </header>
 
-<!-- ================== HERO ================== -->
+<!-- ================== HERO (single Impact card) ================== -->
 <section id="home" class="relative overflow-hidden">
   <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-50 via-white to-brand-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800"></div>
   <div class="max-w-7xl mx-auto px-4 py-14">
@@ -422,20 +390,12 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
   </div>
 </section>
 
-<!-- ================== SKILLS SUMMARY (quick chips) ================== -->
-<section class="py-6">
-  <div class="max-w-7xl mx-auto px-4">
-    <h3 class="text-sm uppercase tracking-wide text-slate-500">Core skills at a glance (click to open)</h3>
-    <div id="skillSummary" class="mt-3 flex flex-wrap gap-2"></div>
-  </div>
-</section>
-
-<!-- ================== SKILLS EXPLORER ================== -->
+<!-- ================== UNIFIED SKILLS EXPLORER ================== -->
 <section id="skills" class="py-12 bg-white dark:bg-slate-950/40">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex items-end justify-between flex-wrap gap-3">
       <h2 class="text-2xl md:text-3xl font-bold">Skills Explorer</h2>
-      <div class="text-xs text-slate-500">Filter by category or by target role</div>
+      <div class="text-xs text-slate-500">Filter by category or target role, then click a skill for details</div>
     </div>
 
     <!-- Category filters -->
@@ -447,7 +407,7 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
       <div id="roleFilter" class="flex flex-wrap gap-2"></div>
     </div>
 
-    <!-- Skill tiles -->
+    <!-- Skill tiles (no progress bar) -->
     <div id="skillGrid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
   </div>
 </section>
@@ -505,15 +465,13 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
   </aside>
 </div>
 
-<!-- ================== ABOUT ================== -->
+<!-- ================== ABOUT (single column details + Certifications) ================== -->
 <section id="about" class="py-12">
   <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
     <div>
       <h2 class="text-2xl md:text-3xl font-bold">About</h2>
       <p class="mt-4 text-slate-700 dark:text-slate-300">
-        I design systems that make great work repeatable—strategy → metrics → execution.
-        My toolkit includes VMOST, value-stream mapping, KPI frameworks, and BI (Tableau/Power BI/SQL/DAX).
-        I love shaping AI/ML adoption with clear success criteria and responsible guardrails.
+        I design systems that make great work repeatable—strategy → metrics → execution. My toolkit includes VMOST, value-stream mapping, KPI frameworks, and BI (Tableau/Power BI/SQL/DAX). I love shaping AI/ML adoption with clear success criteria and responsible guardrails.
       </p>
       <div class="mt-6">
         <h3 class="font-semibold">Certifications</h3>
@@ -528,10 +486,6 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
           <li>📞 <a class="text-brand-700 underline" href="tel:+918125293949">+91-8125293949</a></li>
           <li>✉️ <a class="text-brand-700 underline" href="mailto:anil.yaswanth@gmail.com">anil.yaswanth@gmail.com</a></li>
         </ul>
-      </div>
-      <div class="mt-4 rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5">
-        <h3 class="font-semibold">Impact at a glance</h3>
-        <div id="kpiGrid2" class="mt-3 grid grid-cols-2 gap-4"></div>
       </div>
     </div>
   </div>
@@ -559,9 +513,9 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
       <div class="rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5">
         <h3 class="font-semibold">Tips</h3>
         <ol class="mt-3 space-y-2 text-sm list-decimal pl-5">
-          <li>Want a custom auto‑reply? Add a <span class="font-mono">_replyto</span> field or configure templates in Formspree.</li>
+          <li>Want a custom auto‑reply? Add templates in Formspree.</li>
           <li>Add spam protection with a honeypot field (Formspree settings).</li>
-          <li>Move to Netlify later? Switch the endpoint—no code changes beyond the URL.</li>
+          <li>Move to Netlify later? Switch the endpoint—no other code changes.</li>
         </ol>
       </div>
     </div>
@@ -603,20 +557,12 @@ function renderHero(){
     a.className = 'inline-flex items-center gap-2 px-3 py-2 text-sm rounded-xl bg-white dark:bg-slate-800 ring-1 ring-slate-200 dark:ring-slate-700 shadow hover:shadow-md';
     a.href=l.url; a.target='_blank'; a.rel='noopener'; a.textContent=l.label; links.appendChild(a);
   });
-  const kpi = document.getElementById('kpiGrid'); if(kpi){ kpi.innerHTML='';
-    SITE.impact.forEach(i=>{
-      const card = document.createElement('div');
-      card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-900 ring-1 ring-slate-200 dark:ring-slate-700';
-      card.innerHTML = `<div class="text-slate-500 text-xs">${i.k}</div><div class="text-xl font-semibold">${i.v}</div>`; kpi.appendChild(card);
-    });
-  }
-  const kpi2 = document.getElementById('kpiGrid2'); if(kpi2){ kpi2.innerHTML='';
-    SITE.impact.forEach(i=>{
-      const card = document.createElement('div');
-      card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-900 ring-1 ring-slate-200 dark:ring-slate-700';
-      card.innerHTML = `<div class="text-slate-500 text-xs">${i.k}</div><div class="text-xl font-semibold">${i.v}</div>`; kpi2.appendChild(card);
-    });
-  }
+  const kpi = document.getElementById('kpiGrid'); kpi.innerHTML='';
+  SITE.impact.forEach(i=>{
+    const card = document.createElement('div');
+    card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-900 ring-1 ring-slate-200 dark:ring-slate-700';
+    card.innerHTML = `<div class="text-slate-500 text-xs">${i.k}</div><div class="text-xl font-semibold">${i.v}</div>`; kpi.appendChild(card);
+  });
 }
 
 // ---------- Certifications ----------
@@ -661,10 +607,8 @@ function renderProjects(){
     });
     wrap.appendChild(grid); panels.appendChild(wrap);
   });
-  // default tab
   const hash = location.hash.replace('#','');
   activateProjTab(SITE.tabs.map(x=>x.id).includes(hash)?hash:SITE.tabs[0].id);
-  // open events
   panels.addEventListener('click', (e)=>{
     const btn = e.target.closest('[data-open]'); if(!btn) return;
     const [tab,id] = btn.dataset.open.split('|'); openProj(tab,id);
@@ -691,26 +635,11 @@ function openProj(tab,id){
 }
 function closeProj(){ document.getElementById('projDrawer').classList.add('hidden'); }
 
-// ---------- Skills (summary chips + filters + drawer) ----------
+// ---------- Unified Skills (filters + drawer) ----------
 let selectedCat = null;
 let selectedRoles = new Set();
 
-function renderSkillSummary(){
-  const wrap = document.getElementById('skillSummary'); wrap.innerHTML='';
-  SITE.skills
-    .sort((a,b)=>b.years-a.years)
-    .slice(0,8)
-    .forEach(s=>{
-      const chip = document.createElement('button');
-      chip.className='px-3 py-1.5 rounded-full bg-white dark:bg-slate-800 ring-1 ring-slate-200 dark:ring-slate-700 text-sm hover:bg-brand-50';
-      chip.innerHTML = `<strong>${s.name}</strong> • ${s.years}+ yrs`;
-      chip.onclick=()=>openSkill(s.id);
-      wrap.appendChild(chip);
-    });
-}
-
 function renderSkillFilters(){
-  // Category tabs
   const tabs = document.getElementById('skillTabs'); tabs.innerHTML='';
   (SITE.skillCategories||[]).forEach(c=>{
     const b = document.createElement('button');
@@ -721,7 +650,6 @@ function renderSkillFilters(){
   });
   selectedCat = SITE.skillCategories[0]?.id || null;
 
-  // Role relevance filter
   const rf = document.getElementById('roleFilter'); rf.innerHTML='';
   SITE.rolesUniverse.forEach(role=>{
     const b = document.createElement('button');
@@ -729,7 +657,7 @@ function renderSkillFilters(){
     b.textContent=role;
     b.onclick=()=>{
       if(selectedRoles.has(role)) selectedRoles.delete(role); else selectedRoles.add(role);
-      b.classList.toggle('bg-brand-100'); // simple visual toggle
+      b.classList.toggle('bg-brand-100');
       buildSkillGrid();
     };
     rf.appendChild(b);
@@ -746,14 +674,12 @@ function buildSkillGrid(){
     const empty = document.createElement('div');
     empty.className='text-slate-500 text-sm';
     empty.textContent='No skills match this filter. Clear role filters to see all.';
-    grid.appendChild(empty);
-    return;
+    grid.appendChild(empty); return;
   }
 
   list.forEach(s=>{
     const card = document.createElement('button');
     card.className='text-left rounded-3xl bg-white dark:bg-slate-800 p-6 shadow-sm ring-1 ring-black/5 hover:shadow-lg hover:-translate-y-0.5 transition';
-    const pct = Math.min(10, Math.max(0, s.years)) * 10; // bar length
     const badges = (s.badges||[]).slice(0,3).map(b=>`<span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-900/60">${b}</span>`).join(' ');
     const roles = (s.roles||[]).slice(0,3).map(r=>`<span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-900/60">${r}</span>`).join(' ');
     card.innerHTML = `
@@ -763,7 +689,6 @@ function buildSkillGrid(){
       </div>
       <h3 class="mt-3 font-semibold">${s.name}</h3>
       <div class="mt-1 text-xs flex flex-wrap gap-1">${roles}</div>
-      <div class="mt-3 h-2 bg-slate-100 dark:bg-slate-900/60 rounded-full overflow-hidden"><div class="h-full bg-brand-500" style="width:${pct}%"></div></div>
       <div class="mt-3 flex flex-wrap gap-2">${badges}</div>
     `;
     card.onclick=()=>openSkill(s.id);
@@ -771,7 +696,6 @@ function buildSkillGrid(){
   });
 }
 
-// Drawer
 function openSkill(id){
   const s = SITE.skills.find(x=>x.id===id); if(!s) return;
   document.getElementById('skillTitle').textContent = s.name;
@@ -795,8 +719,7 @@ function openSkill(id){
   (s.tools||[]).forEach(t=>{ const span=document.createElement('span'); span.className='text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-900/60'; span.textContent=t; tools.appendChild(span); });
   const projWrap = document.getElementById('skillProjects'); projWrap.innerHTML='';
   (s.relatedProjects||[]).forEach(pid=>{
-    const {tab, project} = findProject(pid) || {};
-    if(!project) return;
+    const {tab, project} = findProject(pid) || {}; if(!project) return;
     const a = document.createElement('button');
     a.className='px-3 py-2 rounded-xl ring-1 ring-slate-200 dark:ring-slate-700 hover:bg-brand-50';
     a.textContent = project.title;
@@ -835,7 +758,7 @@ function renderCmd(q){
 }
 const cmdInput=document.getElementById('cmdInput'); if(cmdInput){ cmdInput.addEventListener('input', e=>renderCmd(e.target.value)); }
 
-// ---------- Contact form submit (Formspree enabled) ----------
+// ---------- Contact form (Formspree) ----------
 const form = document.getElementById('contactForm');
 if(form){
   form.addEventListener('submit', async (e)=>{
@@ -856,13 +779,9 @@ function init(){
   renderHero();
   renderCerts();
   renderProjects();
-  renderSkillSummary();
   renderSkillFilters();
   buildSkillGrid();
-  // Deep-link to a skill: #skill:people-mgmt
-  if(location.hash.startsWith('#skill:')){
-    const id = location.hash.replace('#skill:','').trim(); openSkill(id);
-  }
+  if(location.hash.startsWith('#skill:')){ const id = location.hash.replace('#skill:','').trim(); openSkill(id); }
 }
 init();
 </script>
