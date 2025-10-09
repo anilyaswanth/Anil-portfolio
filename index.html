@@ -32,6 +32,11 @@
 .pattern-skill::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 20%, rgba(6,182,212,.08) 0 20%, transparent 20% 100%), radial-gradient(circle at 80% 0%, rgba(14,116,144,.08) 0 20%, transparent 20% 100%);pointer-events:none}
 .pattern-projects{background-image:linear-gradient(180deg,rgba(2,6,23,.03),transparent 40%)}
 .pattern-about{background-image:linear-gradient(90deg,rgba(6,182,212,.06) 0 1px,transparent 1px),linear-gradient(180deg,rgba(6,182,212,.06) 0 1px,transparent 1px);background-size:24px 24px}
+.pattern-skill{position:relative}
+.pattern-skill::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 20%, rgba(6,182,212,.08) 0 20%, transparent 20% 100%), radial-gradient(circle at 80% 0%, rgba(14,116,144,.08) 0 20%, transparent 20% 100%);pointer-events:none}
+.pattern-projects{background-image:linear-gradient(180deg,rgba(2,6,23,.03),transparent 40%)}
+.pattern-about{background-image:linear-gradient(90deg,rgba(6,182,212,.06) 0 1px,transparent 1px),linear-gradient(180deg,rgba(6,182,212,.06) 0 1px,transparent 1px);background-size:24px 24px}
+.pattern-experience{background-image:linear-gradient(180deg,rgba(2,6,23,.04),transparent 45%)}
 </style>
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200">
@@ -43,7 +48,7 @@ const SITE = {
     name:'Anil Yaswanth V',
     title:'Operational Excellence • Business Analysis • AI/ML Enablement',
     summary:'Operations & product leader blending an International Diploma in Business Analysis with PRINCE2 Practitioner and Lean Six Sigma Black Belt. 8+ yrs people leadership, 5+ yrs product/BA, 5 yrs OpEx. I connect strategy (VMOST/OKRs) → measurable KPIs → shipped outcomes: 15+ projects/products, AI/ML enablement (non‑tech), and automation that cut manual effort ~60% with ~35% accuracy lift.',
-    location:'Hyderabad, India', phone:'+91-8125293949', email:'anil.yaswanth@gmail.com', photo:'anil-dp.png',
+    location:'Hyderabad, India', phone:'+91-8125293949', email:'anil.yaswanth@gmail.com', photo:'DP Picture.png',
     links:[
       {label:'LinkedIn', url:'https://www.linkedin.com/in/anil-yaswanth-v-a6935587/'},
       {label:'GitHub', url:'#'},
@@ -72,7 +77,7 @@ const SITE = {
     {id:'ai-ml', icon:'🤖', title:'AI/ML', desc:'Feasibility, rollout, automation & quality.'}
   ],
   projects:{
-    'process':[{ id:'ops-suite', tag:'Ops • BI', title:'Operational Excellence Dashboard Suite', metrics:['15+ dashboards','KPI surfacing','~45% opps found'],
+    'process':[ { id:'ops-suite', tag:'Ops • BI', title:'Operational Excellence Dashboard Suite', metrics:['15+ dashboards','KPI surfacing','~45% opps found'],
       teaser:'Unified KPI platform across 14 teams; revealed ~45% improvement areas in year one.',
       body:[
         'Mapped VMOST to KPIs; standardized definitions & lineage to remove reporting drift.',
@@ -86,16 +91,16 @@ const SITE = {
         'Change plan → new tool adoption at 80% utilization; decision speed +50%.',
         'Vendor renegotiation saved ~10% without quality loss.'
       ], links:[{label:'One-pager', url:'#'}]
-    }],
-    'dashboards':[{
+    } ],
+    'dashboards':[ {
       id:'rev-sims', tag:'Revenue • BI', title:'Digital Revenue Pilot – The Sims', metrics:['~$14M pilot impact'],
       teaser:'Exec visuals + leading indicators to steer experiments.',
       body:['Defined north-star KPIs & guardrails; built test/control views; automated weekly narrative.']
     },{ id:'bi-portfolio', tag:'Analytics', title:'BI Portfolio', metrics:['40+ dashboards'],
       teaser:'Self-serve analytics for ops, capacity, and risk.',
       body:['Tableau/Power BI with SQL/DAX models; refresh SLAs & ownership clearly defined.']
-    }],
-    'product-ownership':[{
+    } ],
+    'product-ownership':[ {
       id:'ops-tooling', tag:'Ownership', title:'Internal Ops Tooling Roadmap', metrics:['Adoption ↑','Backlog governance'],
       teaser:'Owned roadmap, PRDs, and release notes for internal ops tools.',
       body:['Prioritized features with impact/effort; ran UAT','Drove adoption with in-product tips and office hours']
@@ -103,8 +108,8 @@ const SITE = {
       id:'kpi-suite', tag:'Product', title:'KPI Suite as a Product', metrics:['Self‑serve adoption','Unified definitions'],
       teaser:'Treating analytics as a product to reduce ad‑hoc requests and improve trust.',
       body:['Onboarding & help docs','Usage analytics & feedback loops']
-    }],
-    'ai-ml':[{
+    } ],
+    'ai-ml':[ {
       id:'ml-rollout', tag:'Automation', title:'AI/ML Rollout Across 3 Domains', metrics:['~60% manual ↓','~35% accuracy ↑'],
       teaser:'Business-led feasibility → pilots → scaled adoption with HITL.',
       body:[
@@ -112,7 +117,7 @@ const SITE = {
         'A/B baselines with precision/recall gates; success criteria locked up front.',
         'Playbook for scale: data contracts, feedback loops, and monitoring.'
       ]
-    }]
+    } ]
   },
 
   /* ================== UNIFIED SKILLS EXPLORER ================== */
@@ -135,14 +140,14 @@ const SITE = {
       roles:['People Leadership','Project/Program Management','Operations'],
       why:'Built high-performing teams across EA and Amazon—clear goals, coaching, hiring, and rhythms that improved throughput and reduced overtime.',
       badges:['Mentoring','Hiring','Performance','Operating rhythm'],
-      metrics:['Led 25-member team (Amazon)','80% tool adoption (change mgmt)','-15% overtime'],
+      metrics:['Led 25+ team (Amazon)','Led 15+ PMs (EA)','80% tool adoption (change mgmt)','-15% overtime'],
       tools:['WFM','1:1s & Reviews','Succession planning','Competency matrix'],
       examples:[
         {role:'EA – OpEx & Business Analysis (Team Lead)',period:'2023–Present',
          bullets:[
            'Set 30/60/90 plans and competency ladders for analysts and contractors.',
            'Established weekly 1:1s, quarterly growth plans, and peer-coaching pods.',
-           'Built follow-the-sun coverage; stabilized on-call rotations.'
+           'Built follow-the-sun coverage; stabilized on-call rotations. Managed managers and managers-of-managers; accountable for outcomes across portfolio (15+ PMs).'
          ]},
         {role:'EA – Cross‑functional Working Group (Ops + DS + Product)',period:'2022–2024',
          bullets:[
@@ -358,6 +363,26 @@ const SITE = {
       examples:[{role:'EA – Analytics Enablement',period:'2019–Present', bullets:['Automated weekly narratives; ensured ownership & SLAs for reliability.']}],
       relatedProjects:['bi-portfolio','ops-suite']
     }
+  ],
+  experience:[
+    {company:'Electronic Arts (EA)', location:'Hyderabad, India', title:'Manager (Business Analysis) – Operational Excellence', start:'06/2023', end:'Present', tags:['Operational Excellence','Business Analysis','Leadership'], bullets:[
+      'Accountable for portfolio delivery across 40+ initiatives; led managers and managers of managers (15+ Project Managers).',
+      'Org-wide operational efficiency tracking across 14 teams; prioritized 40+ projects.',
+      'AI/ML implementation across three domains; ~60% manual reduction and ~35% accuracy lift.',
+      'KPI framework revealed ~45% improvement opportunities; vendor costs -10%.'
+    ]},
+    {company:'Electronic Arts (EA)', location:'Hyderabad, India', title:'Lead Project Manager – Real Time Operations', start:'09/2019', end:'06/2023', tags:['Program','Project','Change'], bullets:[
+      'Owned schedule/risks and executive updates; revenue pilot for The Sims (~$14M).',
+      'FLC change program reached 80% tool utilization; decision speed +50%.',
+      'Directed BI team delivering 40+ dashboards and automation; report turnaround reduced.',
+      'Managed capacity planning; overtime reduced by 15%.'
+    ]},
+    {company:'Amazon', location:'Hyderabad, India', title:'Manager-Intern • Sr. Risk Investigator (SME) • Risk Investigator, B2B', start:'11/2014', end:'08/2019', tags:['People Leadership','Risk','Ops'], bullets:[
+      'Led a 25+ person team for Business Account registrations & investigations.',
+      'Defined SOPs, SLAs and process improvements for Buyer Risk operations.',
+      'Program management liaison for Amazon Business; workforce management.',
+      'Employee of the Year: 2017 & 2018.'
+    ]}
   ]
 };
 
@@ -369,10 +394,11 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
 <header class="sticky top-0 z-50 glass border-b border-slate-200/60 dark:border-slate-800/60">
   <div class="max-w-7xl mx-auto px-4">
     <div class="h-16 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-2 font-semibold"><span class="h-8 w-8 rounded-xl bg-brand-600 text-white grid place-items-center">AV</span><span>Anil Yaswanth</span></a>
+      <a href="#home" class="flex items-center gap-2 font-semibold"><span class="h-8 w-8 rounded-xl bg-brand-600 text-white grid place-items-center">AV</span><span>Anil Yaswanth V</span></a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#skills" class="hover:text-brand-700 dark:hover:text-brand-300">Skills</a>
-        <a href="#projects" class="hover:text-brand-700 dark:hover:text-brand-300">Projects</a>
+        $1
+        <a href="#experience" class="hover:text-brand-700 dark:hover:text-brand-300">Experience</a>
         <a href="#about" class="hover:text-brand-700 dark:hover:text-brand-300">About</a>
         <a href="#contact" class="hover:text-brand-700 dark:hover:text-brand-300">Contact</a>
       </nav>
@@ -482,6 +508,14 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
 </div>
 
 <!-- ================== ABOUT (single column details + Certifications) ================== -->
+<!-- ================== EXPERIENCE ================== -->
+<section id="experience" class="py-12 bg-slate-50 dark:bg-slate-900/30 pattern-experience">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold">Experience</h2>
+    <div id="expTimeline" class="mt-6 space-y-4"></div>
+  </div>
+</section>
+
 <section id="about" class="py-12 pattern-about">
   <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
     <div>
@@ -540,7 +574,7 @@ const FORM_ENDPOINT = "https://formspree.io/f/xzzjazrj";
 
 <footer class="py-8 border-t border-slate-200 dark:border-slate-800">
   <div class="max-w-7xl mx-auto px-4 flex items-center justify-between text-sm">
-    <p>© <span id="year"></span> <strong>Anil Yaswanth</strong></p>
+    <p>© <span id="year"></span> <strong>Anil Yaswanth V</strong></p>
     <a href="#home" class="text-slate-600 dark:text-slate-300 hover:text-brand-700 dark:hover:text-brand-300">Back to top ↑</a>
   </div>
 </footer>
@@ -574,13 +608,19 @@ function renderHero(){
     a.href=l.url; a.target='_blank'; a.rel='noopener'; a.textContent=l.label; links.appendChild(a);
   });
   const img = document.getElementById('heroPhoto');
-  if(img){
-    const candidates = [SITE.person.photo, 'anil-dp.png', 'DP Picture.png'].filter(Boolean);
-    if(candidates.length){
-      img.src = candidates[0];
-      img.onerror = ()=>{ img.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=256&auto=format&fit=crop'; };
-      img.classList.remove('hidden');
-    }
+  if (img) {
+    const base = [SITE.person.photo, 'anil-dp.png', 'DP Picture.png'].filter(Boolean);
+    const candidates = [...new Set(base)];
+    const fallback = 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=256&auto=format&fit=crop';
+    let i = 0;
+    const tryNext = () => {
+      if (i >= candidates.length) { img.src = fallback; img.classList.remove('hidden'); return; }
+      const src = candidates[i++] + '?v=' + Date.now(); // cache-bust
+      img.onload  = () => { img.classList.remove('hidden'); };
+      img.onerror = tryNext;
+      img.src = src;
+    };
+    tryNext();
   }
   const kpi = document.getElementById('kpiGrid'); kpi.innerHTML='';
   SITE.impact.forEach(i=>{
@@ -783,17 +823,30 @@ function findProject(pid){
 
 // ---------- Command palette ----------
 const cmdBtn = document.getElementById('cmdBtn');
-function toggleCmd(force){ const wrap=document.getElementById('cmdk'); wrap.classList[force===false?'add':'toggle']('hidden'); if(!wrap.classList.contains('hidden')){ document.getElementById('cmdInput').focus(); renderCmd(''); } }
-if(cmdBtn){ cmdBtn.addEventListener('click',()=>toggleCmd()); }
-window.addEventListener('keydown', (e)=>{ if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){ e.preventDefault(); toggleCmd(); } });
+function toggleCmd(force){
+  const wrap = document.getElementById('cmdk');
+  const isHidden = wrap.classList.contains('hidden');
+  const shouldOpen  = force === true || (force === undefined && isHidden);
+  const shouldClose = force === false || (force === undefined && !isHidden);
+  if (shouldOpen)  { wrap.classList.remove('hidden'); setTimeout(()=>{ document.getElementById('cmdInput').focus(); renderCmd(''); },0); }
+  if (shouldClose) { wrap.classList.add('hidden'); }
+}
+if(cmdBtn){ cmdBtn.addEventListener('click',()=>toggleCmd(true)); }
+window.addEventListener('keydown', (e)=>{
+  const el = document.activeElement; const typing = el && (el.tagName==='INPUT'||el.tagName==='TEXTAREA'||el.isContentEditable);
+  if((e.metaKey||e.ctrlKey) && (e.key==='k' || e.key==='K')){ if(!typing){ e.preventDefault(); toggleCmd(true); } }
+  if(e.key==='Escape'){ toggleCmd(false); }
+});
 function renderCmd(q){
   const items = [
     {label:'Go to Skills', action:()=>location.hash='#skills'},
     {label:'Go to Projects', action:()=>location.hash='#projects'},
+    {label:'Go to Experience', action:()=>location.hash='#experience'},
     {label:'Go to About', action:()=>location.hash='#about'},
     {label:'Go to Contact', action:()=>location.hash='#contact'},
     ...SITE.skills.map(s=>({label:`Open skill: ${s.name}`, action:()=>openSkill(s.id)})),
-    ...SITE.tabs.flatMap(t=> (SITE.projects[t.id]||[]).map(p=>({label:`Open project: ${p.title}`, action:()=>openProj(t.id,p.id)})))
+    ...SITE.tabs.flatMap(t=> (SITE.projects[t.id]||[]).map(p=>({label:`Open project: ${p.title}`, action:()=>openProj(t.id,p.id)}))),
+    ...(SITE.experience||[]).map(e=>({label:`Experience: ${e.title} @ ${e.company}`, action:()=>{ location.hash='#experience'; }}))
   ];
   const box = document.getElementById('cmdResults'); box.innerHTML='';
   items.filter(i=>i.label.toLowerCase().includes(q.toLowerCase())).forEach(i=>{
@@ -823,6 +876,7 @@ function init(){
   renderHero();
   renderCerts();
   renderProjects();
+  renderExperience();
   renderSkillFilters();
   buildSkillGrid();
   if(location.hash.startsWith('#skill:')){ const id = location.hash.replace('#skill:','').trim(); openSkill(id); }
